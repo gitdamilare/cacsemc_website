@@ -124,7 +124,7 @@ export default function Footer() {
               </h4>
               <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: "0.65rem", margin: 0, padding: 0 }}>
                 {col.links.map((link) => (
-                  <li key={link.href}>
+                  <li key={`${col.title}-${link.href}-${link.label}`}>
                     <Link
                       href={link.href}
                       style={{
@@ -157,7 +157,7 @@ export default function Footer() {
             © {new Date().getFullYear()} Christ Apostolic Church — Miracle Centre. All rights reserved.
           </p>
           <p style={{ fontSize: "0.76rem", color: "rgba(255,255,255,0.22)" }}>
-            Senior Pastor:{" "}
+            Spiritual Leader:{" "}
             <Link href="/pastor" style={{ color: "rgba(255,255,255,0.35)", textDecoration: "none" }}>
               Dr. Joshua Owoeye
             </Link>

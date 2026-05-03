@@ -6,7 +6,7 @@ import { BlogCard, ScriptureBanner, NewsletterStrip } from "@/components/ui";
 export const metadata: Metadata = {
   title: "Our Pastor",
   description:
-    "Learn about Dr. Joshua Owoeye, Senior Pastor of CAC Miracle Centre — his calling, ministry, and teachings.",
+    "Learn about Dr. Joshua Owoeye, Spiritual Leader of CAC Miracle Centre — his calling, ministry, and teachings.",
 };
 
 const highlights = [
@@ -85,7 +85,7 @@ export default function PastorPage() {
                 Dr. Joshua Owoeye
               </p>
               <p style={{ fontSize: "0.72rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--gold)", fontWeight: 500, marginBottom: "0.25rem" }}>
-                Senior Pastor
+                Spiritual Leader
               </p>
               <p style={{ fontSize: "0.8rem", color: "var(--ink-faint)" }}>
                 CAC Miracle Centre
@@ -136,7 +136,7 @@ export default function PastorPage() {
             </div>
 
             <p className="body-text">
-              Dr. Joshua Owoeye is the Senior Pastor of CAC Miracle Centre and a committed minister of the full gospel of Jesus Christ. With decades of ministry experience, his life's work has been teaching the whole counsel of God's Word — with conviction, clarity, and pastoral compassion.
+              Dr. Joshua Owoeye is the Spiritual Leader of CAC Miracle Centre and a committed minister of the full gospel of Jesus Christ. With decades of ministry experience, his life's work has been teaching the whole counsel of God's Word — with conviction, clarity, and pastoral compassion.
             </p>
             <p className="body-text">
               His passion is the making of true disciples: believers who are not just spiritually enthusiastic, but deeply grounded in Scripture, holy in character, and effective in service to God and neighbour. He believes the Church's greatest need today is not more entertainment, but more truth.
@@ -170,7 +170,7 @@ export default function PastorPage() {
                 Dr. Owoeye is also a prolific writer. His articles on character, holiness, sin, leadership, and church accountability have been read by thousands across Nigeria and the diaspora. Each piece is structured, scripture-rich, and practically applied.
               </p>
               <p className="body-text">
-                As Senior Pastor of CAC Miracle Centre, he provides spiritual oversight, expository preaching, leadership development, and the overall direction of the ministry — all under the motto of the Christ Apostolic Church: <em style={{ fontFamily: "var(--serif)", color: "var(--gold)" }}>&quot;One Fold, One Shepherd.&quot;</em>
+                As Spiritual Leader of CAC Miracle Centre, he provides spiritual oversight, expository preaching, leadership development, and the overall direction of the ministry — all under the motto of the Christ Apostolic Church: <em style={{ fontFamily: "var(--serif)", color: "var(--gold)" }}>&quot;One Fold, One Shepherd.&quot;</em>
               </p>
             </div>
 

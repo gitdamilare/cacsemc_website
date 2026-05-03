@@ -148,14 +148,19 @@ export const serviceTimes: ServiceTime[] = [
     time: "6:00 PM",
     description:
       "Deeper study of Scripture in a warm, interactive setting. Come with your Bible and your questions.",
+    zoomLink: "https://zoom.us/j/3476389063",
+    zoomPassword: "8157",
     highlighted: true,
   },
   {
-    day: "Every Friday",
-    name: "Night of Prayer & Vigil",
-    time: "10:00 PM – 2:00 AM",
+    day: "Daily (Monday - Friday)",
+    name: "Prayer Line",
+    time: "7:00 PM – 8:00 PM",
     description:
-      "A night set apart for intercession, spiritual warfare, and waiting on God. All are welcome.",
+      "A time of corporate prayer and intercession. Join us from anywhere as we seek God's face together. ",
+    phone: "+1 (312) 667-4791",
+    //zoomLink: "https://zoom.us/j/",
+    zoomPassword: "362397",
   },
   {
     day: "Sundays during 10:30 AM",
@@ -164,13 +169,20 @@ export const serviceTimes: ServiceTime[] = [
     description:
       "A dedicated, Bible-centred space for the next generation — age-appropriate and Spirit-led.",
   },
-  {
-    day: "Last Saturday Monthly",
-    name: "Women's Fellowship",
-    time: "10:00 AM",
+    {
+    day: "Every Last Friday",
+    name: "Men's Night Vigil Prayer Service",
+    time: "12:00 AM – 1:00 AM",
     description:
-      "A time of encouragement, prayer, and the Word specifically for the women of the church.",
+      "A night set apart for intercession, spiritual warfare, and waiting on God. All are welcome.",
   },
+  // {
+  //   day: "Last Saturday Monthly",
+  //   name: "Women's Fellowship",
+  //   time: "10:00 AM",
+  //   description:
+  //     "A time of encouragement, prayer, and the Word specifically for the women of the church.",
+  // },
   {
     day: "Quarterly",
     name: "Evangelism & Outreach",

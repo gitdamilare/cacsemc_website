@@ -149,7 +149,7 @@ export default async function BlogPostPage({ params }: Props) {
                   {post.author}
                 </p>
                 <p style={{ fontSize: "0.75rem", color: "var(--ink-faint)" }}>
-                  Senior Pastor, CAC Miracle Centre
+                  Spiritual Leader, CAC Miracle Centre
                 </p>
               </div>
             </div>

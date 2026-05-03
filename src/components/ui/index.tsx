@@ -269,11 +269,11 @@ export function ServiceCard({ service }: { service: ServiceTime }) {
     >
       <p
         style={{
-          fontSize: "0.62rem",
-          letterSpacing: "0.14em",
+          fontSize: "0.76rem",
+          letterSpacing: "0.12em",
           textTransform: "uppercase",
           color: "var(--gold)",
-          fontWeight: 500,
+          fontWeight: 600,
           marginBottom: "0.5rem",
         }}
       >
@@ -292,9 +292,9 @@ export function ServiceCard({ service }: { service: ServiceTime }) {
       </p>
       <p
         style={{
-          fontSize: "0.95rem",
+          fontSize: "1.03rem",
           color: service.highlighted ? "rgba(255,255,255,0.55)" : "var(--ink-muted)",
-          marginBottom: "0.5rem",
+          marginBottom: "0.65rem",
         }}
       >
         {service.time}
@@ -302,12 +302,51 @@ export function ServiceCard({ service }: { service: ServiceTime }) {
       {service.description && (
         <p
           style={{
-            fontSize: "0.82rem",
+            fontSize: "0.92rem",
             color: service.highlighted ? "rgba(255,255,255,0.35)" : "var(--ink-faint)",
-            lineHeight: 1.65,
+            lineHeight: 1.7,
           }}
         >
           {service.description}
+        </p>
+      )}
+      {service.phone && (
+        <p
+          style={{
+            fontSize: "0.86rem",
+            color: service.highlighted ? "rgba(255,255,255,0.5)" : "var(--ink-muted)",
+            marginTop: "0.65rem",
+          }}
+        >
+          Phone: {service.phone}
+        </p>
+      )}
+      {service.zoomLink && (
+        <p style={{ marginTop: "0.35rem" }}>
+          <a
+            href={service.zoomLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              fontSize: "0.86rem",
+              color: service.highlighted ? "var(--gold)" : "var(--gold-deep)",
+              textDecoration: "none",
+              borderBottom: "1px solid currentColor",
+            }}
+          >
+            Join on Zoom
+          </a>
+        </p>
+      )}
+      {service.zoomPassword && (
+        <p
+          style={{
+            fontSize: "0.84rem",
+            color: service.highlighted ? "rgba(255,255,255,0.4)" : "var(--ink-faint)",
+            marginTop: "0.3rem",
+          }}
+        >
+          Password: {service.zoomPassword}
         </p>
       )}
     </div>

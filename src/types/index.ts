@@ -23,6 +23,9 @@ export interface ServiceTime {
   time: string;
   description?: string;
   highlighted?: boolean;
+  phone?: string;
+  zoomLink?: string;
+  zoomPassword?: string;
 }
 
 export interface Belief {
