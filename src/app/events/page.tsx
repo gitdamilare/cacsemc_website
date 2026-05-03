@@ -258,7 +258,7 @@ export default function EventsPage() {
           </h2>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: "1.5px", background: "var(--border)" }} className="prog-grid">
             {[
-              { day: "Sunday", name: "Worship Service", time: "8:00 AM & 10:30 AM", icon: "☀" },
+              { day: "Sunday", name: "Worship Service", time: "8:00 AM &  01:30 PM", icon: "☀" },
               { day: "Wednesday", name: "Bible Study", time: "6:00 PM", icon: "📖" },
               { day: "Friday", name: "Night Vigil", time: "10:00 PM", icon: "🙏" },
             ].map((p) => (
