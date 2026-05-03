@@ -16,7 +16,7 @@ const footerCols = [
     title: "Content",
     links: [
       { label: "All Teachings", href: "/teachings" },
-      { label: "Blog", href: "/blog" },
+      { label: "Teachings", href: "/teachings" },
       { label: "Sermons", href: "/sermons" },
       { label: "Events", href: "/events" },
     ],

@@ -174,7 +174,7 @@ export default function NotFound() {
           }}
         >
           {[
-            { label: "Blog", href: "/blog" },
+            { label: "Teachings", href: "/teachings" },
             { label: "Sermons", href: "/sermons" },
             { label: "Events", href: "/events" },
             { label: "Contact", href: "/contact" },

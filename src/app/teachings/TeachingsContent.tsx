@@ -7,7 +7,7 @@ import { blogPosts, categories } from "@/lib/data";
 import { BlogCard, NewsletterStrip } from "@/components/ui";
 import type { BlogPost } from "@/types";
 
-export default function BlogContent() {
+export default function TeachingsContent() {
   const [activeCategory, setActiveCategory] = useState("All");
   const [query, setQuery] = useState("");
 
@@ -230,7 +230,7 @@ export default function BlogContent() {
                 {rest.map((post, i) => (
                   <Link
                     key={post.slug}
-                    href={`/blog/${post.slug}`}
+                    href={`/teachings/${post.slug}`}
                     style={{
                       display: "grid",
                       gridTemplateColumns: "1fr 56px",

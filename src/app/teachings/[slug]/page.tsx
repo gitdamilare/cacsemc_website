@@ -64,7 +64,7 @@ export default async function BlogPostPage({ params }: Props) {
           >
             <Link href="/" style={{ color: "var(--ink-faint)", textDecoration: "none" }}>Home</Link>
             <span>/</span>
-            <Link href="/blog" style={{ color: "var(--ink-faint)", textDecoration: "none" }}>Writings</Link>
+            <Link href="/teachings" style={{ color: "var(--ink-faint)", textDecoration: "none" }}>Writings</Link>
             <span>/</span>
             <span>{post.category}</span>
           </div>
@@ -198,7 +198,7 @@ export default async function BlogPostPage({ params }: Props) {
           }}
         >
           <Link
-            href="/blog"
+            href="/teachings"
             style={{
               display: "flex",
               alignItems: "center",
@@ -236,7 +236,7 @@ export default async function BlogPostPage({ params }: Props) {
           }}
         >
           {post.tags.map((tag) => (
-            <Link key={tag} href={`/blog?tag=${tag}`} className="tag-pill">
+            <Link key={tag} href={`/teachings?tag=${tag}`} className="tag-pill">
               {tag}
             </Link>
           ))}
@@ -276,7 +276,7 @@ export default async function BlogPostPage({ params }: Props) {
             {suggestions.map((s) => (
               <Link
                 key={s.slug}
-                href={`/blog/${s.slug}`}
+                href={`/teachings/${s.slug}`}
                 style={{
                   background: "var(--cream)",
                   padding: "1.75rem",

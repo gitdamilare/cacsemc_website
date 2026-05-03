@@ -8,7 +8,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes: MetadataRoute.Sitemap = [
     { url: siteUrl,                   lastModified: new Date(), changeFrequency: "weekly",  priority: 1.0 },
     { url: `${siteUrl}/teachings`,    lastModified: new Date(), changeFrequency: "weekly",  priority: 0.9 },
-    { url: `${siteUrl}/blog`,         lastModified: new Date(), changeFrequency: "weekly",  priority: 0.9 },
+    { url: `${siteUrl}/teachings`,     lastModified: new Date(), changeFrequency: "weekly",  priority: 0.9 },
     { url: `${siteUrl}/sermons`,      lastModified: new Date(), changeFrequency: "weekly",  priority: 0.8 },
     { url: `${siteUrl}/events`,       lastModified: new Date(), changeFrequency: "weekly",  priority: 0.8 },
     { url: `${siteUrl}/about`,        lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
@@ -20,7 +20,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ];
 
   const postRoutes: MetadataRoute.Sitemap = blogPosts.map((post) => ({
-    url: `${siteUrl}/blog/${post.slug}`,
+    url: `${siteUrl}/teachings/${post.slug}`,
     lastModified: new Date(post.date),
     changeFrequency: "monthly",
     priority: post.featured ? 0.9 : 0.8,
