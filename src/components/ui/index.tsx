@@ -160,7 +160,7 @@ export function BlogCard({
   if (variant === "compact") {
     return (
       <Link
-        href={`/blog/${post.slug}`}
+        href={`/teachings/${post.slug}`}
         style={{
           display: "block",
           background: "var(--cream)",
@@ -196,7 +196,7 @@ export function BlogCard({
 
   return (
     <Link
-      href={`/blog/${post.slug}`}
+      href={`/teachings/${post.slug}`}
       style={{
         display: "block",
         background: "var(--cream)",

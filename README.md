@@ -29,10 +29,10 @@ src/
 │   ├── sitemap.ts              Auto sitemap.xml
 │   ├── robots.ts               robots.txt
 │   ├── blog/
-│   │   ├── page.tsx            /blog — listing (server, metadata)
+│   │   ├── page.tsx            /teachings — listing (server, metadata)
 │   │   ├── BlogContent.tsx     Client search + filter UI
 │   │   └── [slug]/
-│   │       ├── page.tsx        /blog/[slug] — SSG post
+│   │       ├── page.tsx        /teachings/[slug] — SSG post
 │   │       └── BlogPostClient  Progress bar, TOC, font toggle
 │   ├── teachings/page.tsx      /teachings
 │   ├── about/page.tsx          /about
