@@ -12,14 +12,14 @@ const contactDetails = [
   {
     icon: MapPin,
     label: "Address",
-    value: "[Church Address Line 1]\n[City, State, Nigeria]",
+    value: "8159 S Exchange Ave\nChicago, IL, USA",
     link: null,
   },
   {
     icon: Phone,
     label: "Phone",
-    value: "+234 000 000 0000",
-    link: "tel:+234000000000",
+    value: "+1 (312) 667-4791",
+    link: "tel:+13126674791",
   },
   {
     icon: Mail,

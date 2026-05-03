@@ -148,7 +148,7 @@ export default function HomePage() {
             {[
               { day: "Sunday", name: "Sunday Worship", time: "10:00 AM & 1:30 PM" },
               { day: "Wednesday", name: "Midweek Bible Study", time: "6:00 PM" },
-              { day: "Friday", name: "Night Vigil & Prayer", time: "10:00 PM" },
+              //{ day: "Monday - Friday", name: "Daily Prayer Line (Zoom)", time: "7:00 PM - 8:00 PM" },
             ].map((t, i, arr) => (
               <div
                 key={t.day}
@@ -340,10 +340,10 @@ export default function HomePage() {
               <em style={{ fontStyle: "italic", color: "var(--gold)" }}>Miracle Centre</em>
             </h2>
             {[
-              { label: "Address", value: "[Church Address Line 1]\n[City, State, Nigeria]" },
-              { label: "Phone", value: "+234 000 000 0000" },
+              { label: "Address", value: "8159 S Exchange Ave\nChicago, IL, USA" },
+              { label: "Phone", value: "+1 (312) 667-4791" },
               { label: "Email", value: "info@cacmiraclecenter.org" },
-              { label: "Sunday Services", value: "8:00 AM & 10:30 AM" },
+              { label: "Sunday Services", value: "10:00 AM & 1:30 PM" },
             ].map((d) => (
               <div key={d.label} style={{ marginBottom: "1.5rem" }}>
                 <p style={{ fontSize: "0.62rem", letterSpacing: "0.12em", textTransform: "uppercase", color: "rgba(255,255,255,0.3)", marginBottom: "0.3rem" }}>{d.label}</p>

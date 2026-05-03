@@ -160,4 +160,4 @@ Replace placeholders in these files:
 
 ---
 
-*Christ Apostolic Church — Miracle Centre · Senior Pastor: Dr. Joshua Owoeye*
+*Christ Apostolic Church — Miracle Centre · Spiritual Leader: Dr. Joshua Owoeye*

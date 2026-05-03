@@ -310,6 +310,45 @@ export function ServiceCard({ service }: { service: ServiceTime }) {
           {service.description}
         </p>
       )}
+      {service.phone && (
+        <p
+          style={{
+            fontSize: "0.78rem",
+            color: service.highlighted ? "rgba(255,255,255,0.5)" : "var(--ink-muted)",
+            marginTop: "0.65rem",
+          }}
+        >
+          Phone: {service.phone}
+        </p>
+      )}
+      {service.zoomLink && (
+        <p style={{ marginTop: "0.35rem" }}>
+          <a
+            href={service.zoomLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              fontSize: "0.78rem",
+              color: service.highlighted ? "var(--gold)" : "var(--gold-deep)",
+              textDecoration: "none",
+              borderBottom: "1px solid currentColor",
+            }}
+          >
+            Join on Zoom
+          </a>
+        </p>
+      )}
+      {service.zoomPassword && (
+        <p
+          style={{
+            fontSize: "0.74rem",
+            color: service.highlighted ? "rgba(255,255,255,0.4)" : "var(--ink-faint)",
+            marginTop: "0.3rem",
+          }}
+        >
+          Password: {service.zoomPassword}
+        </p>
+      )}
     </div>
   );
 }
