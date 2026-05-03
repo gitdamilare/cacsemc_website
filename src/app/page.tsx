@@ -80,7 +80,7 @@ export default function HomePage() {
           <p
             style={{
               display: "inline-flex", alignItems: "center", gap: "0.75rem",
-              fontSize: "0.68rem", letterSpacing: "0.18em", textTransform: "uppercase",
+              fontSize: "0.78rem", letterSpacing: "0.16em", textTransform: "uppercase",
               color: "var(--gold)", fontWeight: 500, marginBottom: "2rem",
             }}
           >
@@ -147,7 +147,7 @@ export default function HomePage() {
           >
             {[
               { day: "Sunday", name: "Sunday Worship", time: "10:00 AM & 1:30 PM" },
-              { day: "Wednesday", name: "Midweek Bible Study", time: "6:00 PM" },
+              { day: "Wednesday", name: "Midweek Bible Study", time: "6:00 PM - 7:30 PM" },
               //{ day: "Monday - Friday", name: "Daily Prayer Line (Zoom)", time: "7:00 PM - 8:00 PM" },
             ].map((t, i, arr) => (
               <div
@@ -158,9 +158,9 @@ export default function HomePage() {
                 }}
                 className="hero-time-item"
               >
-                <p style={{ fontSize: "0.62rem", letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--gold)", fontWeight: 500, marginBottom: "0.4rem" }}>{t.day}</p>
-                <p style={{ fontSize: "0.9rem", color: "rgba(255,255,255,0.8)", marginBottom: "0.2rem" }}>{t.name}</p>
-                <p style={{ fontSize: "0.78rem", color: "rgba(255,255,255,0.35)", fontFamily: "var(--serif)", fontStyle: "italic" }}>{t.time}</p>
+                <p style={{ fontSize: "0.78rem", letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--gold)", fontWeight: 600, marginBottom: "0.45rem" }}>{t.day}</p>
+                <p style={{ fontSize: "1.02rem", color: "rgba(255,255,255,0.88)", marginBottom: "0.3rem" }}>{t.name}</p>
+                <p style={{ fontSize: "0.94rem", color: "rgba(255,255,255,0.55)", fontFamily: "var(--serif)", fontStyle: "italic" }}>{t.time}</p>
               </div>
             ))}
           </div>
@@ -291,13 +291,13 @@ export default function HomePage() {
                 J
               </div>
               <p style={{ fontFamily: "var(--serif)", fontSize: "1.55rem", fontWeight: 500, color: "var(--ink)" }}>Dr. Joshua Owoeye</p>
-              <p style={{ fontSize: "0.72rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--gold)", fontWeight: 500 }}>Senior Pastor</p>
+              <p style={{ fontSize: "0.72rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--gold)", fontWeight: 500 }}>Spiritual Leader</p>
               <p style={{ fontSize: "0.8rem", color: "var(--ink-faint)" }}>CAC Miracle Centre</p>
             </div>
             <div
               style={{ background: "var(--warm-white)", padding: "4rem", display: "flex", flexDirection: "column", justifyContent: "center", gap: "1.25rem" }}
             >
-              <p className="body-text">Dr. Joshua Owoeye is the Senior Pastor of CAC Miracle Centre and a committed minister of the full gospel of Jesus Christ. With decades of ministry experience, his life&apos;s work has been teaching the whole counsel of God&apos;s Word — with conviction, clarity, and pastoral compassion.</p>
+              <p className="body-text">Dr. Joshua Owoeye is the Spiritual Leader of CAC Miracle Centre and a committed minister of the full gospel of Jesus Christ. With decades of ministry experience, his life&apos;s work has been teaching the whole counsel of God&apos;s Word — with conviction, clarity, and pastoral compassion.</p>
               <p className="body-text">His passion is the making of true disciples: believers who are not just spiritually enthusiastic, but deeply grounded in Scripture, holy in character, and effective in service to God and neighbour.</p>
               <p className="body-text">Dr. Owoeye is also a prolific author and teacher whose writings on character, holiness, sin, leadership, and church accountability continue to impact lives across Nigeria and in the diaspora.</p>
               <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap", marginTop: "0.25rem" }}>
@@ -346,8 +346,8 @@ export default function HomePage() {
               { label: "Sunday Services", value: "10:00 AM & 1:30 PM" },
             ].map((d) => (
               <div key={d.label} style={{ marginBottom: "1.5rem" }}>
-                <p style={{ fontSize: "0.62rem", letterSpacing: "0.12em", textTransform: "uppercase", color: "rgba(255,255,255,0.3)", marginBottom: "0.3rem" }}>{d.label}</p>
-                <p style={{ fontSize: "0.93rem", color: "rgba(255,255,255,0.7)", lineHeight: 1.55, whiteSpace: "pre-line" }}>{d.value}</p>
+                <p style={{ fontSize: "0.76rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "rgba(255,255,255,0.4)", marginBottom: "0.35rem" }}>{d.label}</p>
+                <p style={{ fontSize: "1.03rem", color: "rgba(255,255,255,0.82)", lineHeight: 1.6, whiteSpace: "pre-line" }}>{d.value}</p>
               </div>
             ))}
           </div>
