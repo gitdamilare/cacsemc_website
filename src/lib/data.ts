@@ -138,7 +138,7 @@ export const serviceTimes: ServiceTime[] = [
   {
     day: "Every Sunday",
     name: "Sunday Worship Service",
-    time: "10:00 AM & 10:30 AM",
+    time: "10:00 AM & 01:30 PM",
     description:
       "Our main gathering — Spirit-led praise, heartfelt worship, and expository preaching from the Word of God.",
   },
@@ -163,14 +163,14 @@ export const serviceTimes: ServiceTime[] = [
     zoomPassword: "362397",
   },
   {
-    day: "Sundays during 10:30 AM",
+    day: "Sundays during 08:00 AM",
     name: "Children & Youth Church",
-    time: "Parallel with Main Service",
+    time: "Before with Main Service",
     description:
       "A dedicated, Bible-centred space for the next generation — age-appropriate and Spirit-led.",
   },
     {
-    day: "Every Last Friday",
+    day: "Every Last Friday (Monthly)",
     name: "Men's Night Vigil Prayer Service",
     time: "12:00 AM – 1:00 AM",
     description:

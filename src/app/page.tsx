@@ -146,7 +146,7 @@ export default function HomePage() {
             className="hero-times"
           >
             {[
-              { day: "Sunday", name: "Sunday Worship", time: "10:00 AM & 1:30 PM" },
+              { day: "Sunday", name: "Sunday Worship", time: "10:00 AM & 01:30 PM" },
               { day: "Wednesday", name: "Midweek Bible Study", time: "6:00 PM - 7:30 PM" },
               //{ day: "Monday - Friday", name: "Daily Prayer Line (Zoom)", time: "7:00 PM - 8:00 PM" },
             ].map((t, i, arr) => (
@@ -343,7 +343,7 @@ export default function HomePage() {
               { label: "Address", value: "8159 S Exchange Ave\nChicago, IL, USA" },
               { label: "Phone", value: "+1 (312) 667-4791" },
               { label: "Email", value: "info@cacmiraclecenter.org" },
-              { label: "Sunday Services", value: "10:00 AM & 1:30 PM" },
+              { label: "Sunday Services", value: "10:00 AM & 01:30 PM" },
             ].map((d) => (
               <div key={d.label} style={{ marginBottom: "1.5rem" }}>
                 <p style={{ fontSize: "0.76rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "rgba(255,255,255,0.4)", marginBottom: "0.35rem" }}>{d.label}</p>
