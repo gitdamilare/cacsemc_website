@@ -43,7 +43,7 @@ export default function PastorPage() {
             maxWidth: 1200,
             margin: "0 auto",
             display: "grid",
-            gridTemplateColumns: "360px 1fr",
+            gridTemplateColumns: "360px minmax(0, 1fr)",
             gap: "1.5px",
             background: "var(--border)",
           }}
@@ -84,10 +84,10 @@ export default function PastorPage() {
               <p style={{ fontFamily: "var(--serif)", fontSize: "1.7rem", fontWeight: 500, color: "var(--ink)", marginBottom: "0.3rem" }}>
                 Dr. Joshua Owoeye
               </p>
-              <p style={{ fontSize: "0.72rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--gold)", fontWeight: 500, marginBottom: "0.25rem" }}>
+              <p style={{ fontSize: "var(--text-meta)", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--gold)", fontWeight: 500, marginBottom: "0.25rem" }}>
                 Spiritual Leader
               </p>
-              <p style={{ fontSize: "0.8rem", color: "var(--ink-faint)" }}>
+              <p style={{ fontSize: "var(--text-meta)", color: "var(--ink-faint)" }}>
                 CAC Miracle Centre
               </p>
             </div>
@@ -95,7 +95,7 @@ export default function PastorPage() {
             <p
               style={{
                 fontFamily: "var(--serif)",
-                fontSize: "0.95rem",
+                fontSize: "var(--text-label)",
                 fontStyle: "italic",
                 color: "var(--gold)",
                 lineHeight: 1.6,
@@ -110,7 +110,7 @@ export default function PastorPage() {
           <div
             style={{
               background: "var(--warm-white)",
-              padding: "4rem",
+              padding: "clamp(1rem, 5vw, 4rem)",
               display: "flex",
               flexDirection: "column",
               justifyContent: "center",
@@ -130,7 +130,7 @@ export default function PastorPage() {
               {highlights.map((h) => (
                 <div key={h.num} style={{ background: "var(--cream)", padding: "1.25rem 1rem", textAlign: "center" }}>
                   <p style={{ fontFamily: "var(--serif)", fontSize: "2rem", fontWeight: 600, color: "var(--ink)", lineHeight: 1 }}>{h.num}</p>
-                  <p style={{ fontSize: "0.68rem", letterSpacing: "0.08em", textTransform: "uppercase", color: "var(--ink-faint)", marginTop: "0.25rem" }}>{h.label}</p>
+                  <p style={{ fontSize: "var(--text-meta)", letterSpacing: "0.08em", textTransform: "uppercase", color: "var(--ink-faint)", marginTop: "0.25rem" }}>{h.label}</p>
                 </div>
               ))}
             </div>
@@ -201,7 +201,7 @@ export default function PastorPage() {
                         flexShrink: 0,
                       }}
                     />
-                    <span style={{ fontSize: "0.95rem", color: "var(--ink-muted)" }}>{area}</span>
+                    <span style={{ fontSize: "var(--text-label)", color: "var(--ink-muted)" }}>{area}</span>
                   </div>
                 ))}
               </div>
@@ -215,7 +215,7 @@ export default function PastorPage() {
                   borderRadius: "0 4px 4px 0",
                 }}
               >
-                <p style={{ fontSize: "0.68rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--gold)", fontWeight: 500, marginBottom: "0.75rem" }}>
+                <p style={{ fontSize: "var(--text-meta)", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--gold)", fontWeight: 500, marginBottom: "0.75rem" }}>
                   Ministry Outcomes
                 </p>
                 {[
@@ -225,7 +225,7 @@ export default function PastorPage() {
                   "Lives transformed by obedience to God's Word",
                   "A generation committed to righteousness",
                 ].map((o, i) => (
-                  <p key={i} style={{ fontSize: "0.88rem", color: "var(--ink-muted)", lineHeight: 1.6, marginBottom: "0.4rem" }}>
+                  <p key={i} style={{ fontSize: "var(--text-label)", color: "var(--ink-muted)", lineHeight: 1.6, marginBottom: "0.4rem" }}>
                     — {o}
                   </p>
                 ))}
@@ -262,8 +262,8 @@ export default function PastorPage() {
 
       <style>{`
         @media (max-width: 1000px) {
-          .pastor-hero-grid { grid-template-columns: 1fr !important; }
-          .stats-grid { grid-template-columns: repeat(2,1fr) !important; }
+          .pastor-hero-grid { grid-template-columns: minmax(0, 1fr) !important; }
+          .stats-grid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
           .two-col { grid-template-columns: 1fr !important; gap: 3rem !important; }
           .teachings-grid { grid-template-columns: 1fr !important; }
         }

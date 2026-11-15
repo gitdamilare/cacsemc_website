@@ -53,7 +53,7 @@ export default function SermonsPage() {
           <p className="eyebrow" style={{ marginBottom: "1.5rem" }}>Latest Message</p>
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1.5px", background: "var(--border)" }} className="latest-grid">
             {/* Video placeholder */}
-            <div
+            <div className="palette-inverse"
               style={{
                 background: "var(--deep)",
                 aspectRatio: "16/9",
@@ -88,7 +88,7 @@ export default function SermonsPage() {
               >
                 <Play size={24} fill="white" color="white" style={{ marginLeft: 3 }} />
               </div>
-              <p style={{ fontSize: "0.75rem", color: "rgba(255,255,255,0.5)", zIndex: 1, letterSpacing: "0.06em", textTransform: "uppercase" }}>
+              <p style={{ fontSize: "var(--text-meta)", color: "var(--on-deep-muted)", zIndex: 1, letterSpacing: "0.06em", textTransform: "uppercase" }}>
                 Watch Sermon
               </p>
             </div>
@@ -98,7 +98,7 @@ export default function SermonsPage() {
               <span
                 style={{
                   display: "inline-block",
-                  fontSize: "0.62rem",
+                  fontSize: "var(--text-meta)",
                   letterSpacing: "0.12em",
                   textTransform: "uppercase",
                   color: "var(--gold)",
@@ -123,17 +123,17 @@ export default function SermonsPage() {
               >
                 {latest.title}
               </h2>
-              <p style={{ fontSize: "0.9rem", color: "var(--ink-muted)", lineHeight: 1.7, marginBottom: "1.5rem" }}>
+              <p style={{ fontSize: "var(--text-label)", color: "var(--ink-muted)", lineHeight: 1.7, marginBottom: "1.5rem" }}>
                 {latest.description}
               </p>
               <div style={{ display: "flex", gap: "1.5rem", marginBottom: "2rem", flexWrap: "wrap" }}>
-                <span style={{ display: "flex", alignItems: "center", gap: "0.4rem", fontSize: "0.78rem", color: "var(--ink-faint)" }}>
+                <span style={{ display: "flex", alignItems: "center", gap: "0.4rem", fontSize: "var(--text-meta)", color: "var(--ink-faint)" }}>
                   <BookOpen size={13} /> {latest.scripture}
                 </span>
-                <span style={{ display: "flex", alignItems: "center", gap: "0.4rem", fontSize: "0.78rem", color: "var(--ink-faint)" }}>
+                <span style={{ display: "flex", alignItems: "center", gap: "0.4rem", fontSize: "var(--text-meta)", color: "var(--ink-faint)" }}>
                   <Clock size={13} /> {latest.duration}
                 </span>
-                <span style={{ display: "flex", alignItems: "center", gap: "0.4rem", fontSize: "0.78rem", color: "var(--ink-faint)" }}>
+                <span style={{ display: "flex", alignItems: "center", gap: "0.4rem", fontSize: "var(--text-meta)", color: "var(--ink-faint)" }}>
                   <Calendar size={13} /> {new Date(latest.date).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" })}
                 </span>
               </div>
@@ -164,7 +164,7 @@ export default function SermonsPage() {
               key={cat}
               style={{
                 padding: "1rem 1.1rem",
-                fontSize: "0.76rem",
+                fontSize: "var(--text-meta)",
                 letterSpacing: "0.04em",
                 color: i === 0 ? "var(--gold)" : "var(--ink-muted)",
                 background: "none",
@@ -211,7 +211,7 @@ export default function SermonsPage() {
                 </div>
 
                 <div style={{ flex: 1 }}>
-                  <span style={{ fontSize: "0.62rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--gold)", fontWeight: 500 }}>
+                  <span style={{ fontSize: "var(--text-meta)", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--gold)", fontWeight: 500 }}>
                     {sermon.category}
                   </span>
                   <h3
@@ -226,17 +226,17 @@ export default function SermonsPage() {
                   >
                     {sermon.title}
                   </h3>
-                  <p style={{ fontSize: "0.83rem", color: "var(--ink-muted)", lineHeight: 1.6, marginBottom: "0.75rem" }}>
+                  <p style={{ fontSize: "var(--text-label)", color: "var(--ink-muted)", lineHeight: 1.6, marginBottom: "0.75rem" }}>
                     {sermon.description}
                   </p>
                   <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
-                    <span style={{ fontSize: "0.72rem", color: "var(--ink-faint)", display: "flex", alignItems: "center", gap: "0.35rem" }}>
+                    <span style={{ fontSize: "var(--text-meta)", color: "var(--ink-faint)", display: "flex", alignItems: "center", gap: "0.35rem" }}>
                       <BookOpen size={11} /> {sermon.scripture}
                     </span>
-                    <span style={{ fontSize: "0.72rem", color: "var(--ink-faint)", display: "flex", alignItems: "center", gap: "0.35rem" }}>
+                    <span style={{ fontSize: "var(--text-meta)", color: "var(--ink-faint)", display: "flex", alignItems: "center", gap: "0.35rem" }}>
                       <Clock size={11} /> {sermon.duration}
                     </span>
-                    <span style={{ fontSize: "0.72rem", color: "var(--ink-faint)" }}>
+                    <span style={{ fontSize: "var(--text-meta)", color: "var(--ink-faint)" }}>
                       {new Date(sermon.date).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" })}
                     </span>
                   </div>

@@ -96,7 +96,7 @@ export function ScriptureBanner({
         </p>
         <p
           style={{
-            fontSize: "0.72rem",
+            fontSize: "var(--text-meta)",
             letterSpacing: "0.12em",
             textTransform: "uppercase",
             color: "var(--gold)",
@@ -134,7 +134,7 @@ export function NewsletterStrip() {
           Be the first to know when a new article or teaching is published. Delivered to your inbox — no noise, just truth.
         </p>
         <NewsletterForm />
-        <p style={{ fontSize: "0.73rem", color: "var(--ink-faint)", marginTop: "0.75rem" }}>
+        <p style={{ fontSize: "var(--text-meta)", color: "var(--ink-faint)", marginTop: "0.75rem" }}>
           No spam. Unsubscribe anytime.
         </p>
       </div>
@@ -186,7 +186,7 @@ export function BlogCard({
         >
           {post.title}
         </h3>
-        <p style={{ fontSize: "0.73rem", color: "var(--ink-faint)" }}>
+        <p style={{ fontSize: "var(--text-meta)", color: "var(--ink-faint)" }}>
           {post.readTime} min read
         </p>
         <style>{`.blog-card-compact:hover { background: var(--gold-pale) !important; }`}</style>
@@ -225,7 +225,7 @@ export function BlogCard({
       </h3>
       <p
         style={{
-          fontSize: "0.86rem",
+          fontSize: "var(--text-body)",
           color: "var(--ink-muted)",
           lineHeight: 1.7,
           marginBottom: "1rem",
@@ -238,7 +238,7 @@ export function BlogCard({
           display: "flex",
           alignItems: "center",
           gap: "1rem",
-          fontSize: "0.73rem",
+          fontSize: "var(--text-meta)",
           color: "var(--ink-faint)",
           flexWrap: "wrap",
         }}
@@ -269,10 +269,10 @@ export function ServiceCard({ service }: { service: ServiceTime }) {
     >
       <p
         style={{
-          fontSize: "0.76rem",
+          fontSize: "var(--text-meta)",
           letterSpacing: "0.12em",
           textTransform: "uppercase",
-          color: "var(--gold)",
+          color: service.highlighted ? "var(--gold-on-deep)" : "var(--gold)",
           fontWeight: 600,
           marginBottom: "0.5rem",
         }}
@@ -292,8 +292,8 @@ export function ServiceCard({ service }: { service: ServiceTime }) {
       </p>
       <p
         style={{
-          fontSize: "1.03rem",
-          color: service.highlighted ? "rgba(255,255,255,0.55)" : "var(--ink-muted)",
+          fontSize: "var(--text-body)",
+          color: service.highlighted ? "var(--on-deep-muted)" : "var(--ink-muted)",
           marginBottom: "0.65rem",
         }}
       >
@@ -302,8 +302,8 @@ export function ServiceCard({ service }: { service: ServiceTime }) {
       {service.description && (
         <p
           style={{
-            fontSize: "0.92rem",
-            color: service.highlighted ? "rgba(255,255,255,0.35)" : "var(--ink-faint)",
+            fontSize: "var(--text-label)",
+            color: service.highlighted ? "var(--on-deep-muted)" : "var(--ink-faint)",
             lineHeight: 1.7,
           }}
         >
@@ -313,8 +313,8 @@ export function ServiceCard({ service }: { service: ServiceTime }) {
       {service.phone && (
         <p
           style={{
-            fontSize: "0.86rem",
-            color: service.highlighted ? "rgba(255,255,255,0.5)" : "var(--ink-muted)",
+            fontSize: "var(--text-meta)",
+            color: service.highlighted ? "var(--on-deep-muted)" : "var(--ink-muted)",
             marginTop: "0.65rem",
           }}
         >
@@ -328,8 +328,8 @@ export function ServiceCard({ service }: { service: ServiceTime }) {
             target="_blank"
             rel="noopener noreferrer"
             style={{
-              fontSize: "0.86rem",
-              color: service.highlighted ? "var(--gold)" : "var(--gold-deep)",
+              fontSize: "var(--text-label)",
+              color: service.highlighted ? "var(--gold-on-deep)" : "var(--gold)",
               textDecoration: "none",
               borderBottom: "1px solid currentColor",
             }}
@@ -341,8 +341,8 @@ export function ServiceCard({ service }: { service: ServiceTime }) {
       {service.zoomPassword && (
         <p
           style={{
-            fontSize: "0.84rem",
-            color: service.highlighted ? "rgba(255,255,255,0.4)" : "var(--ink-faint)",
+            fontSize: "var(--text-meta)",
+            color: service.highlighted ? "var(--on-deep-muted)" : "var(--ink-faint)",
             marginTop: "0.3rem",
           }}
         >
@@ -356,7 +356,7 @@ export function ServiceCard({ service }: { service: ServiceTime }) {
 /* ─── Welcome strip ───────────────────────────────── */
 export function WelcomeStrip() {
   return (
-    <div style={{ background: "var(--gold)", padding: "1.1rem 2rem" }}>
+    <div style={{ background: "var(--button)", padding: "1.1rem 2rem" }}>
       <div
         style={{
           maxWidth: 1200,
@@ -368,19 +368,19 @@ export function WelcomeStrip() {
           flexWrap: "wrap",
         }}
       >
-        <p style={{ fontSize: "0.85rem", color: "white" }}>
+        <p style={{ fontSize: "var(--text-meta)", color: "var(--on-button)" }}>
           Visiting for the first time? We would love to welcome you.
         </p>
         <Link
           href="/visit"
           style={{
-            fontSize: "0.8rem",
+            fontSize: "var(--text-meta)",
             fontWeight: 500,
             letterSpacing: "0.07em",
             textTransform: "uppercase",
-            color: "white",
+            color: "var(--on-button)",
             textDecoration: "none",
-            borderBottom: "1px solid rgba(255,255,255,0.45)",
+            borderBottom: "1px solid currentColor",
             paddingBottom: 1,
           }}
         >

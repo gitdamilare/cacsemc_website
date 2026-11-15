@@ -20,7 +20,7 @@ export default function SubscribePage() {
   return (
     <>
       {/* ── HERO ────────────────────────────────────── */}
-      <div
+      <div className="palette-inverse"
         style={{
           background: "var(--deep)",
           padding: "6rem 2rem 5rem",
@@ -33,7 +33,7 @@ export default function SubscribePage() {
         <div aria-hidden style={{ position: "absolute", inset: 0, backgroundImage: "linear-gradient(rgba(184,147,58,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(184,147,58,0.04) 1px,transparent 1px)", backgroundSize: "64px 64px", pointerEvents: "none" }} />
         <div aria-hidden style={{ position: "absolute", inset: 0, background: "radial-gradient(ellipse 80% 70% at 50% 50%, transparent 20%, rgba(44,26,14,0.75) 100%)", pointerEvents: "none" }} />
         <div style={{ maxWidth: 640, margin: "0 auto", position: "relative", zIndex: 1 }}>
-          <p style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "0.75rem", fontSize: "0.68rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--gold)", fontWeight: 500, marginBottom: "1.5rem" }}>
+          <p style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "0.75rem", fontSize: "var(--text-meta)", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--gold)", fontWeight: 500, marginBottom: "1.5rem" }}>
             <span style={{ width: 24, height: 1, background: "var(--gold)", opacity: 0.5, display: "inline-block" }} />
             Stay Connected
             <span style={{ width: 24, height: 1, background: "var(--gold)", opacity: 0.5, display: "inline-block" }} />
@@ -51,7 +51,7 @@ export default function SubscribePage() {
             Receive New{" "}
             <em style={{ fontStyle: "italic", color: "var(--gold)" }}>Teachings</em>
           </h1>
-          <p style={{ fontSize: "1rem", color: "rgba(255,255,255,0.5)", lineHeight: 1.85, maxWidth: 480, margin: "0 auto 3rem" }}>
+          <p style={{ fontSize: "1rem", color: "var(--on-deep-muted)", lineHeight: 1.85, maxWidth: 480, margin: "0 auto 3rem" }}>
             Join thousands who receive Dr. Owoeye's scripture-grounded teachings directly in their inbox. No spam. Just truth.
           </p>
 
@@ -86,7 +86,7 @@ export default function SubscribePage() {
               <div key={i} style={{ background: "var(--warm-white)", padding: "2.5rem 2rem", textAlign: "center" }}>
                 <p style={{ fontSize: "2rem", marginBottom: "1rem" }}>{b.icon}</p>
                 <h3 style={{ fontFamily: "var(--serif)", fontSize: "1.1rem", fontWeight: 500, color: "var(--ink)", marginBottom: "0.6rem" }}>{b.title}</h3>
-                <p style={{ fontSize: "0.84rem", color: "var(--ink-muted)", lineHeight: 1.7 }}>{b.desc}</p>
+                <p style={{ fontSize: "var(--text-label)", color: "var(--ink-muted)", lineHeight: 1.7 }}>{b.desc}</p>
               </div>
             ))}
           </div>
@@ -114,9 +114,9 @@ export default function SubscribePage() {
       </section>
 
       {/* ── FINAL CTA ───────────────────────────────── */}
-      <div
+      <div className="on-gold"
         style={{
-          background: "var(--gold)",
+          background: "var(--button)",
           padding: "4rem 2rem",
           textAlign: "center",
         }}
@@ -127,13 +127,13 @@ export default function SubscribePage() {
               fontFamily: "var(--serif)",
               fontSize: "2.2rem",
               fontWeight: 400,
-              color: "white",
+              color: "var(--on-button)",
               marginBottom: "0.75rem",
             }}
           >
             Don't Miss the Next Teaching
           </h2>
-          <p style={{ fontSize: "0.95rem", color: "rgba(255,255,255,0.75)", lineHeight: 1.7, marginBottom: "2rem" }}>
+          <p style={{ fontSize: "var(--text-label)", color: "var(--on-button)", lineHeight: 1.7, marginBottom: "2rem" }}>
             New articles are published regularly. Subscribe now and be the first to read them.
           </p>
           <GoldBannerForm />
