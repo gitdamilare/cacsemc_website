@@ -42,14 +42,14 @@ export default function Navbar() {
 
   return (
     <>
-      <nav
+      <nav className="site-navigation"
         style={{
           position: "fixed",
           top: 0, left: 0, right: 0,
           zIndex: 100,
           background: scrolled
-            ? "rgba(253,252,250,0.96)"
-            : "rgba(253,252,250,0.92)",
+            ? "color-mix(in srgb, var(--warm-white) 98%, var(--cream))"
+            : "var(--warm-white)",
           backdropFilter: "blur(16px)",
           borderBottom: "1px solid var(--border-soft)",
           padding: "0 2rem",
@@ -69,7 +69,7 @@ export default function Navbar() {
         >
           {/* Brand with logo */}
           <Link
-            href="/"
+            href="/" className="site-brand"
             style={{
               textDecoration: "none",
               display: "flex",
@@ -99,7 +99,7 @@ export default function Navbar() {
               </span>
               <span
                 style={{
-                  fontSize: "0.6rem",
+                  fontSize: "var(--text-meta)",
                   letterSpacing: "0.12em",
                   textTransform: "uppercase",
                   color: "var(--ink-faint)",
@@ -126,7 +126,7 @@ export default function Navbar() {
                 <Link
                   href={link.href}
                   style={{
-                    fontSize: "0.75rem",
+                    fontSize: "var(--text-label)",
                     fontWeight: 400,
                     letterSpacing: "0.05em",
                     textTransform: "uppercase",
@@ -149,7 +149,7 @@ export default function Navbar() {
           </ul>
 
           <div style={{ display: "flex", alignItems: "center", gap: "0.75rem", flexShrink: 0 }}>
-            <Link href="/visit" className="btn-gold" style={{ padding: "0.5rem 1.2rem" }}>
+            <Link href="/visit" className="btn-gold desktop-visit" style={{ padding: "0.5rem 1.2rem" }}>
               Plan a Visit
             </Link>
 
@@ -197,7 +197,7 @@ export default function Navbar() {
                   display: "block",
                   padding: "1rem 0",
                   borderBottom: "1px solid var(--border-soft)",
-                  fontSize: "0.9rem",
+                  fontSize: "var(--text-label)",
                   letterSpacing: "0.05em",
                   textTransform: "uppercase",
                   color: isActive(link.href) ? "var(--gold)" : "var(--ink-muted)",
@@ -223,9 +223,16 @@ export default function Navbar() {
       )}
 
       <style>{`
-        @media (max-width: 1000px) {
+        @media (max-width: 1120px) {
           .desktop-nav { display: none !important; }
+          .site-navigation { padding-inline: 1rem !important; }
+          .site-navigation > div { gap: 0.75rem !important; }
+          .site-brand { flex-shrink: 1 !important; min-width: 0; }
+          .site-brand img { flex-shrink: 0; }
           .mobile-menu-btn { display: flex !important; }
+        }
+        @media (max-width: 560px) {
+          .desktop-visit { display: none !important; }
         }
       `}</style>
     </>

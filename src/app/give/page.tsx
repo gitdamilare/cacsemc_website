@@ -37,7 +37,7 @@ export default function GivePage() {
   return (
     <>
       {/* ── HEADER ──────────────────────────────────── */}
-      <div
+      <div className="palette-inverse"
         style={{
           background: "var(--deep)",
           padding: "6rem 2rem 5rem",
@@ -49,7 +49,7 @@ export default function GivePage() {
       >
         <div aria-hidden style={{ position: "absolute", inset: 0, backgroundImage: "linear-gradient(rgba(184,147,58,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(184,147,58,0.04) 1px,transparent 1px)", backgroundSize: "64px 64px", pointerEvents: "none" }} />
         <div style={{ maxWidth: 680, margin: "0 auto", position: "relative", zIndex: 1 }}>
-          <p style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "0.75rem", fontSize: "0.68rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--gold)", fontWeight: 500, marginBottom: "1.5rem" }}>
+          <p style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "0.75rem", fontSize: "var(--text-meta)", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--gold)", fontWeight: 500, marginBottom: "1.5rem" }}>
             <span style={{ width: 24, height: 1, background: "var(--gold)", opacity: 0.5, display: "inline-block" }} />
             Generous Giving
             <span style={{ width: 24, height: 1, background: "var(--gold)", opacity: 0.5, display: "inline-block" }} />
@@ -67,7 +67,7 @@ export default function GivePage() {
             Give to the{" "}
             <em style={{ fontStyle: "italic", color: "var(--gold)" }}>Kingdom</em>
           </h1>
-          <p style={{ fontSize: "1rem", color: "rgba(255,255,255,0.5)", lineHeight: 1.85, maxWidth: 520, margin: "0 auto" }}>
+          <p style={{ fontSize: "1rem", color: "var(--on-deep-muted)", lineHeight: 1.85, maxWidth: 520, margin: "0 auto" }}>
             Giving is an act of worship. Your generosity enables this ministry to preach the Word, make disciples, and serve our community — to the glory of God.
           </p>
         </div>
@@ -111,7 +111,7 @@ export default function GivePage() {
                   {i + 1}
                 </div>
                 <h3 style={{ fontSize: "1rem", fontWeight: 500, color: "var(--ink)", marginBottom: "0.5rem" }}>{r.title}</h3>
-                <p style={{ fontSize: "0.88rem", color: "var(--ink-muted)", lineHeight: 1.75 }}>{r.desc}</p>
+                <p style={{ fontSize: "var(--text-label)", color: "var(--ink-muted)", lineHeight: 1.75 }}>{r.desc}</p>
               </div>
             ))}
           </div>
@@ -140,32 +140,32 @@ export default function GivePage() {
                       borderBottom: i < bankDetails.length - 1 ? "1px solid var(--border-soft)" : "none",
                     }}
                   >
-                    <span style={{ fontSize: "0.75rem", color: "var(--ink-faint)", letterSpacing: "0.04em" }}>{d.label}</span>
-                    <span style={{ fontSize: "0.9rem", color: "var(--ink)", fontWeight: 500 }}>{d.value}</span>
+                    <span style={{ fontSize: "var(--text-meta)", color: "var(--ink-faint)", letterSpacing: "0.04em" }}>{d.label}</span>
+                    <span style={{ fontSize: "var(--text-label)", color: "var(--ink)", fontWeight: 500 }}>{d.value}</span>
                   </div>
                 ))}
               </div>
-              <p style={{ fontSize: "0.8rem", color: "var(--ink-faint)", lineHeight: 1.65, marginTop: "1.25rem" }}>
+              <p style={{ fontSize: "var(--text-label)", color: "var(--ink-faint)", lineHeight: 1.65, marginTop: "1.25rem" }}>
                 Please use your name as the payment reference so we can acknowledge your giving.
               </p>
             </div>
 
             {/* In Person / Envelope */}
-            <div style={{ background: "var(--deep)", padding: "3rem" }}>
-              <p style={{ fontSize: "0.68rem", letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--gold)", fontWeight: 500, marginBottom: "1rem" }}>
+            <div className="palette-inverse" style={{ background: "var(--deep)", padding: "3rem" }}>
+              <p style={{ fontSize: "var(--text-meta)", letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--gold)", fontWeight: 500, marginBottom: "1rem" }}>
                 During Service
               </p>
               <h3 style={{ fontFamily: "var(--serif)", fontSize: "1.4rem", fontWeight: 400, color: "white", marginBottom: "1.25rem" }}>
                 Give in Person
               </h3>
-              <p style={{ fontSize: "0.9rem", color: "rgba(255,255,255,0.55)", lineHeight: 1.75, marginBottom: "1.5rem" }}>
+              <p style={{ fontSize: "var(--text-label)", color: "var(--on-deep-muted)", lineHeight: 1.75, marginBottom: "1.5rem" }}>
                 Offering envelopes are available at the entrance to all Sunday services and midweek meetings. Our ushers will guide you during the offertory moment.
               </p>
               <div style={{ height: 1, background: "rgba(255,255,255,0.08)", marginBottom: "1.5rem" }} />
               <p style={{ fontFamily: "var(--serif)", fontSize: "1rem", fontStyle: "italic", color: "var(--gold)", lineHeight: 1.6 }}>
                 "Honour the Lord with your wealth and with the firstfruits of all your produce."
               </p>
-              <p style={{ fontSize: "0.72rem", color: "rgba(255,255,255,0.3)", marginTop: "0.5rem", letterSpacing: "0.08em", textTransform: "uppercase" }}>
+              <p style={{ fontSize: "var(--text-meta)", color: "var(--on-deep-muted)", marginTop: "0.5rem", letterSpacing: "0.08em", textTransform: "uppercase" }}>
                 Proverbs 3:9
               </p>
             </div>
@@ -188,7 +188,7 @@ export default function GivePage() {
               { ref: "Matthew 6:19–21", text: "Store up for yourselves treasures in heaven... For where your treasure is, there your heart will be also." },
             ].map((s, i) => (
               <div key={i} style={{ background: "var(--cream)", padding: "1.75rem 2rem", borderLeft: "3px solid var(--gold)" }}>
-                <p style={{ fontSize: "0.68rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--gold)", fontWeight: 500, marginBottom: "0.5rem" }}>{s.ref}</p>
+                <p style={{ fontSize: "var(--text-meta)", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--gold)", fontWeight: 500, marginBottom: "0.5rem" }}>{s.ref}</p>
                 <p style={{ fontFamily: "var(--serif)", fontSize: "1rem", fontStyle: "italic", color: "var(--ink-muted)", lineHeight: 1.7 }}>"{s.text}"</p>
               </div>
             ))}

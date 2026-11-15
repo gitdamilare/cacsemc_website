@@ -57,7 +57,8 @@ export default async function BlogPostPage({ params }: Props) {
               display: "flex",
               alignItems: "center",
               gap: "0.5rem",
-              fontSize: "0.75rem",
+              flexWrap: "wrap",
+              fontSize: "var(--text-meta)",
               color: "var(--ink-faint)",
               marginBottom: "1.5rem",
             }}
@@ -72,7 +73,7 @@ export default async function BlogPostPage({ params }: Props) {
           <span
             style={{
               display: "inline-block",
-              fontSize: "0.62rem",
+              fontSize: "var(--text-meta)",
               letterSpacing: "0.12em",
               textTransform: "uppercase",
               color: "var(--gold)",
@@ -145,10 +146,10 @@ export default async function BlogPostPage({ params }: Props) {
                 J
               </div>
               <div>
-                <p style={{ fontSize: "0.9rem", fontWeight: 500, color: "var(--ink)" }}>
+                <p style={{ fontSize: "var(--text-label)", fontWeight: 500, color: "var(--ink)" }}>
                   {post.author}
                 </p>
-                <p style={{ fontSize: "0.75rem", color: "var(--ink-faint)" }}>
+                <p style={{ fontSize: "var(--text-meta)", color: "var(--ink-faint)" }}>
                   Spiritual Leader, CAC Miracle Centre
                 </p>
               </div>
@@ -158,7 +159,7 @@ export default async function BlogPostPage({ params }: Props) {
                 display: "flex",
                 alignItems: "center",
                 gap: "1.25rem",
-                fontSize: "0.78rem",
+                fontSize: "var(--text-meta)",
                 color: "var(--ink-faint)",
               }}
             >
@@ -203,7 +204,7 @@ export default async function BlogPostPage({ params }: Props) {
               display: "flex",
               alignItems: "center",
               gap: "0.4rem",
-              fontSize: "0.78rem",
+              fontSize: "var(--text-label)",
               color: "var(--ink-muted)",
               textDecoration: "none",
               letterSpacing: "0.05em",
@@ -213,8 +214,8 @@ export default async function BlogPostPage({ params }: Props) {
             <ArrowLeft size={13} /> All Writings
           </Link>
           <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
-            <span style={{ fontSize: "0.72rem", color: "var(--ink-faint)" }}>Share:</span>
-            <button className="btn-outline" style={{ padding: "0.35rem 0.85rem", fontSize: "0.72rem" }}>
+            <span style={{ fontSize: "var(--text-meta)", color: "var(--ink-faint)" }}>Share:</span>
+            <button className="btn-outline" style={{ padding: "0.35rem 0.85rem" }}>
               <Share2 size={12} /> Share
             </button>
           </div>
@@ -254,7 +255,7 @@ export default async function BlogPostPage({ params }: Props) {
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
           <p
             style={{
-              fontSize: "0.68rem",
+              fontSize: "var(--text-meta)",
               letterSpacing: "0.14em",
               textTransform: "uppercase",
               color: "var(--gold)",
@@ -267,7 +268,7 @@ export default async function BlogPostPage({ params }: Props) {
           <div
             style={{
               display: "grid",
-              gridTemplateColumns: "repeat(3,1fr)",
+              gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 14rem), 1fr))",
               gap: "1.5px",
               background: "var(--border)",
             }}
@@ -300,7 +301,7 @@ export default async function BlogPostPage({ params }: Props) {
                 >
                   {s.title}
                 </h3>
-                <p style={{ fontSize: "0.73rem", color: "var(--ink-faint)" }}>
+                <p style={{ fontSize: "var(--text-meta)", color: "var(--ink-faint)" }}>
                   {s.readTime} min read
                 </p>
               </Link>
@@ -312,6 +313,7 @@ export default async function BlogPostPage({ params }: Props) {
       <NewsletterStrip />
 
       <style>{`
+        .related-card { min-width: 0; overflow-wrap: anywhere; }
         .related-card:hover { background: var(--gold-pale) !important; }
         @media (max-width: 700px) {
           .related-grid { grid-template-columns: 1fr !important; }

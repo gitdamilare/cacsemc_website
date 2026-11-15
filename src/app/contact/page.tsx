@@ -71,8 +71,8 @@ export default function ContactPage() {
       {/* ── MAIN CONTACT LAYOUT ──────────────────────── */}
       <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1.5px", background: "var(--border)" }} className="contact-main-grid">
         {/* Info */}
-        <div style={{ background: "var(--deep)", padding: "4rem" }} className="contact-info-panel">
-          <p style={{ fontSize: "0.68rem", letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--gold)", fontWeight: 500, marginBottom: "0.6rem" }}>
+        <div style={{ background: "var(--deep)", padding: "4rem" }} className="contact-info-panel palette-inverse">
+          <p style={{ fontSize: "var(--text-meta)", letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--gold)", fontWeight: 500, marginBottom: "0.6rem" }}>
             Find Us
           </p>
           <h2
@@ -117,15 +117,15 @@ export default function ContactPage() {
                   <Icon size={15} color="var(--gold)" />
                 </div>
                 <div>
-                  <p style={{ fontSize: "0.62rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "rgba(255,255,255,0.3)", marginBottom: "0.25rem" }}>
+                  <p style={{ fontSize: "var(--text-meta)", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--on-deep-muted)", marginBottom: "0.25rem" }}>
                     {d.label}
                   </p>
                   {d.link ? (
-                    <a href={d.link} style={{ fontSize: "0.92rem", color: "var(--gold)", textDecoration: "none", lineHeight: 1.55 }}>
+                    <a href={d.link} style={{ fontSize: "var(--text-label)", color: "var(--gold)", textDecoration: "none", lineHeight: 1.55, overflowWrap: "anywhere" }}>
                       {d.value}
                     </a>
                   ) : (
-                    <p style={{ fontSize: "0.92rem", color: "rgba(255,255,255,0.65)", lineHeight: 1.55, whiteSpace: "pre-line" }}>
+                    <p style={{ fontSize: "var(--text-label)", color: "var(--on-deep-muted)", lineHeight: 1.55, whiteSpace: "pre-line" }}>
                       {d.value}
                     </p>
                   )}
@@ -151,13 +151,13 @@ export default function ContactPage() {
             }}
           >
             <MapPin size={24} color="var(--gold)" opacity={0.5} />
-            <p style={{ fontSize: "0.78rem", color: "rgba(255,255,255,0.25)", letterSpacing: "0.06em", textTransform: "uppercase" }}>
+            <p style={{ fontSize: "var(--text-meta)", color: "var(--on-deep-muted)", letterSpacing: "0.06em", textTransform: "uppercase" }}>
               Map placeholder
             </p>
           </div>
 
           <div style={{ marginTop: "2rem" }}>
-            <p style={{ fontFamily: "var(--serif)", fontSize: "0.9rem", fontStyle: "italic", color: "var(--gold)", lineHeight: 1.6, opacity: 0.8 }}>
+            <p style={{ fontFamily: "var(--serif)", fontSize: "var(--text-label)", fontStyle: "italic", color: "var(--gold)", lineHeight: 1.6, opacity: 0.8 }}>
               "One Fold, One Shepherd" — John 10:16
             </p>
           </div>
@@ -194,11 +194,11 @@ export default function ContactPage() {
             <p style={{ fontFamily: "var(--serif)", fontSize: "1.1rem", fontStyle: "italic", color: "var(--ink)", lineHeight: 1.65 }}>
               "The prayer of a righteous person is powerful and effective."
             </p>
-            <cite style={{ fontSize: "0.72rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--gold)", fontStyle: "normal", fontWeight: 500 }}>
+            <cite style={{ fontSize: "var(--text-meta)", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--gold)", fontStyle: "normal", fontWeight: 500 }}>
               James 5:16
             </cite>
           </div>
-          <p style={{ fontSize: "0.88rem", color: "var(--ink-muted)" }}>
+          <p style={{ fontSize: "var(--text-label)", color: "var(--ink-muted)" }}>
             Submit your prayer request using the contact form above and select{" "}
             <em>&quot;Prayer request&quot;</em> as the reason. Your request is kept confidential.
           </p>

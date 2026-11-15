@@ -72,10 +72,10 @@ export default function Footer() {
                 </p>
                 <p
                   style={{
-                    fontSize: "0.6rem",
+                    fontSize: "var(--text-meta)",
                     letterSpacing: "0.12em",
                     textTransform: "uppercase",
-                    color: "rgba(255,255,255,0.25)",
+                    color: "var(--on-deep-muted)",
                   }}
                 >
                   Christ Apostolic Church
@@ -84,8 +84,8 @@ export default function Footer() {
             </div>
             <p
               style={{
-                fontSize: "0.83rem",
-                color: "rgba(255,255,255,0.4)",
+                fontSize: "var(--text-meta)",
+                color: "var(--on-deep-muted)",
                 lineHeight: 1.75,
                 maxWidth: 280,
                 marginTop: "1rem",
@@ -97,7 +97,7 @@ export default function Footer() {
               style={{
                 fontFamily: "var(--serif)",
                 fontStyle: "italic",
-                fontSize: "0.82rem",
+                fontSize: "var(--text-meta)",
                 color: "var(--gold)",
                 marginTop: "1rem",
                 opacity: 0.8,
@@ -112,10 +112,10 @@ export default function Footer() {
             <div key={col.title}>
               <h4
                 style={{
-                  fontSize: "0.62rem",
+                  fontSize: "var(--text-meta)",
                   letterSpacing: "0.13em",
                   textTransform: "uppercase",
-                  color: "rgba(255,255,255,0.28)",
+                  color: "var(--on-deep-muted)",
                   fontWeight: 500,
                   marginBottom: "1.25rem",
                 }}
@@ -128,8 +128,8 @@ export default function Footer() {
                     <Link
                       href={link.href}
                       style={{
-                        fontSize: "0.84rem",
-                        color: "rgba(255,255,255,0.5)",
+                        fontSize: "var(--text-label)",
+                        color: "var(--on-deep-muted)",
                         textDecoration: "none",
                         transition: "color var(--transition)",
                       }}
@@ -153,12 +153,12 @@ export default function Footer() {
             gap: "1rem",
           }}
         >
-          <p style={{ fontSize: "0.76rem", color: "rgba(255,255,255,0.22)" }}>
+          <p style={{ fontSize: "var(--text-meta)", color: "var(--on-deep-muted)" }}>
             © {new Date().getFullYear()} Christ Apostolic Church — Miracle Centre. All rights reserved.
           </p>
-          <p style={{ fontSize: "0.76rem", color: "rgba(255,255,255,0.22)" }}>
+          <p style={{ fontSize: "var(--text-meta)", color: "var(--on-deep-muted)" }}>
             Spiritual Leader:{" "}
-            <Link href="/pastor" style={{ color: "rgba(255,255,255,0.35)", textDecoration: "none" }}>
+            <Link href="/pastor" style={{ color: "var(--on-deep-muted)", textDecoration: "none" }}>
               Dr. Joshua Owoeye
             </Link>
           </p>

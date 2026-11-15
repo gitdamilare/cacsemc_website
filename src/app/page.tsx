@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import {
   ScriptureBanner,
@@ -28,7 +27,7 @@ export default function HomePage() {
         style={{
           paddingTop: "var(--nav-h)",
           minHeight: "100vh",
-          background: "var(--deep)",
+          background: "var(--cream)",
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
@@ -44,7 +43,7 @@ export default function HomePage() {
           style={{
             position: "absolute", inset: 0,
             backgroundImage:
-              "linear-gradient(rgba(184,147,58,0.05) 1px,transparent 1px),linear-gradient(90deg,rgba(184,147,58,0.05) 1px,transparent 1px)",
+              "linear-gradient(color-mix(in srgb, var(--gold) 7%, transparent) 1px,transparent 1px),linear-gradient(90deg,color-mix(in srgb, var(--gold) 7%, transparent) 1px,transparent 1px)",
             backgroundSize: "64px 64px",
             pointerEvents: "none",
           }}
@@ -54,7 +53,7 @@ export default function HomePage() {
           aria-hidden
           style={{
             position: "absolute", inset: 0,
-            background: "radial-gradient(ellipse 80% 70% at 50% 50%,transparent 20%,rgba(44,26,14,0.75) 100%)",
+            background: "radial-gradient(ellipse 80% 70% at 50% 50%,transparent 20%,color-mix(in srgb, var(--gold-pale) 45%, transparent) 100%)",
             pointerEvents: "none",
           }}
         />
@@ -80,7 +79,7 @@ export default function HomePage() {
           <p
             style={{
               display: "inline-flex", alignItems: "center", gap: "0.75rem",
-              fontSize: "0.78rem", letterSpacing: "0.16em", textTransform: "uppercase",
+              fontSize: "var(--text-meta)", letterSpacing: "0.16em", textTransform: "uppercase",
               color: "var(--gold)", fontWeight: 500, marginBottom: "2rem",
             }}
           >
@@ -93,7 +92,7 @@ export default function HomePage() {
             style={{
               fontFamily: "var(--serif)",
               fontSize: "clamp(3.2rem, 8vw, 7rem)",
-              fontWeight: 400, lineHeight: 1.04, color: "white", marginBottom: "0.6rem",
+              fontWeight: 400, lineHeight: 1.04, color: "var(--ink)", marginBottom: "0.6rem",
             }}
           >
             A Place to{" "}
@@ -105,7 +104,7 @@ export default function HomePage() {
               fontFamily: "var(--serif)",
               fontSize: "clamp(1.2rem, 2.5vw, 1.8rem)",
               fontWeight: 400, fontStyle: "italic",
-              color: "rgba(255,255,255,0.38)", marginBottom: "2.5rem",
+              color: "var(--ink-muted)", marginBottom: "2.5rem",
             }}
           >
             Worship. Word. Community.
@@ -113,7 +112,7 @@ export default function HomePage() {
 
           <p
             style={{
-              fontSize: "1rem", color: "rgba(255,255,255,0.5)",
+              fontSize: "var(--text-body)", color: "var(--ink-muted)",
               lineHeight: 1.85, maxWidth: 560, margin: "0 auto 3rem",
             }}
           >
@@ -127,10 +126,10 @@ export default function HomePage() {
             <Link
               href="/teachings"
               style={{
-                fontSize: "0.82rem", fontWeight: 400, letterSpacing: "0.07em",
-                textTransform: "uppercase", color: "rgba(255,255,255,0.6)",
+                fontSize: "var(--text-label)", fontWeight: 400, letterSpacing: "0.07em",
+                textTransform: "uppercase", color: "var(--ink-muted)",
                 padding: "1rem 2.5rem", borderRadius: 2, textDecoration: "none",
-                border: "1px solid rgba(255,255,255,0.18)",
+                border: "1px solid var(--control-border)",
               }}
             >
               Explore Teachings
@@ -141,7 +140,7 @@ export default function HomePage() {
           <div
             style={{
               display: "flex", justifyContent: "center",
-              borderTop: "1px solid rgba(255,255,255,0.07)", paddingTop: "3rem", flexWrap: "wrap", gap: 0,
+              borderTop: "1px solid var(--border)", paddingTop: "3rem", flexWrap: "wrap", gap: 0,
             }}
             className="hero-times"
           >
@@ -154,13 +153,13 @@ export default function HomePage() {
                 key={t.day}
                 style={{
                   padding: "0 2.5rem", textAlign: "center",
-                  borderRight: i < arr.length - 1 ? "1px solid rgba(255,255,255,0.07)" : "none",
+                  borderRight: i < arr.length - 1 ? "1px solid var(--border)" : "none",
                 }}
                 className="hero-time-item"
               >
-                <p style={{ fontSize: "0.78rem", letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--gold)", fontWeight: 600, marginBottom: "0.45rem" }}>{t.day}</p>
-                <p style={{ fontSize: "1.02rem", color: "rgba(255,255,255,0.88)", marginBottom: "0.3rem" }}>{t.name}</p>
-                <p style={{ fontSize: "0.94rem", color: "rgba(255,255,255,0.55)", fontFamily: "var(--serif)", fontStyle: "italic" }}>{t.time}</p>
+                <p style={{ fontSize: "var(--text-meta)", letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--gold)", fontWeight: 600, marginBottom: "0.45rem" }}>{t.day}</p>
+                <p style={{ fontSize: "1.02rem", color: "var(--ink-muted)", marginBottom: "0.3rem" }}>{t.name}</p>
+                <p style={{ fontSize: "var(--text-label)", color: "var(--ink-muted)", fontFamily: "var(--serif)", fontStyle: "italic" }}>{t.time}</p>
               </div>
             ))}
           </div>
@@ -216,8 +215,8 @@ export default function HomePage() {
                     {v.icon}
                   </div>
                   <div>
-                    <h3 style={{ fontSize: "0.9rem", fontWeight: 500, color: "var(--ink)", marginBottom: "0.2rem" }}>{v.title}</h3>
-                    <p style={{ fontSize: "0.83rem", color: "var(--ink-muted)", lineHeight: 1.65 }}>{v.description}</p>
+                    <h3 style={{ fontSize: "var(--text-label)", fontWeight: 500, color: "var(--ink)", marginBottom: "0.2rem" }}>{v.title}</h3>
+                    <p style={{ fontSize: "var(--text-label)", color: "var(--ink-muted)", lineHeight: 1.65 }}>{v.description}</p>
                   </div>
                 </div>
               ))}
@@ -256,8 +255,8 @@ export default function HomePage() {
             {beliefs.map((b, i) => (
               <div key={i} style={{ background: "var(--warm-white)", padding: "2.5rem 1.75rem" }}>
                 <p style={{ fontFamily: "var(--serif)", fontSize: "2.2rem", color: "var(--gold)", fontStyle: "italic", opacity: 0.6, marginBottom: "1rem" }}>{b.glyph}</p>
-                <p style={{ fontFamily: "var(--serif)", fontSize: "1.1rem", fontWeight: 500, color: "var(--ink)", marginBottom: "0.5rem" }}>{b.title}</p>
-                <p style={{ fontSize: "0.82rem", color: "var(--ink-muted)", lineHeight: 1.7 }}>{b.description}</p>
+                <h3 className="belief-title">{b.title}</h3>
+                <p className="belief-description">{b.description}</p>
               </div>
             ))}
           </div>
@@ -291,8 +290,8 @@ export default function HomePage() {
                 J
               </div>
               <p style={{ fontFamily: "var(--serif)", fontSize: "1.55rem", fontWeight: 500, color: "var(--ink)" }}>Dr. Joshua Owoeye</p>
-              <p style={{ fontSize: "0.72rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--gold)", fontWeight: 500 }}>Spiritual Leader</p>
-              <p style={{ fontSize: "0.8rem", color: "var(--ink-faint)" }}>CAC Miracle Centre</p>
+              <p style={{ fontSize: "var(--text-meta)", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--gold)", fontWeight: 500 }}>Spiritual Leader</p>
+              <p style={{ fontSize: "var(--text-meta)", color: "var(--ink-faint)" }}>CAC Miracle Centre</p>
             </div>
             <div
               style={{ background: "var(--warm-white)", padding: "4rem", display: "flex", flexDirection: "column", justifyContent: "center", gap: "1.25rem" }}
@@ -330,7 +329,7 @@ export default function HomePage() {
       <section id="contact">
         <div className="gap-grid contact-grid">
           {/* Info panel */}
-          <div style={{ background: "var(--deep)", padding: "4rem" }} className="contact-info">
+          <div style={{ background: "var(--deep)", padding: "4rem" }} className="contact-info palette-inverse">
             <p className="eyebrow" style={{ marginBottom: "0.6rem", color: "var(--gold)" }}>Find Us</p>
             <h2
               className="section-heading"
@@ -346,8 +345,8 @@ export default function HomePage() {
               { label: "Sunday Services", value: "10:00 AM & 01:30 PM" },
             ].map((d) => (
               <div key={d.label} style={{ marginBottom: "1.5rem" }}>
-                <p style={{ fontSize: "0.76rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "rgba(255,255,255,0.4)", marginBottom: "0.35rem" }}>{d.label}</p>
-                <p style={{ fontSize: "1.03rem", color: "rgba(255,255,255,0.82)", lineHeight: 1.6, whiteSpace: "pre-line" }}>{d.value}</p>
+                <p style={{ fontSize: "var(--text-meta)", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--on-deep-muted)", marginBottom: "0.35rem" }}>{d.label}</p>
+                <p style={{ fontSize: "1.03rem", color: "var(--on-deep-muted)", lineHeight: 1.6, whiteSpace: "pre-line" }}>{d.value}</p>
               </div>
             ))}
           </div>
@@ -366,13 +365,11 @@ export default function HomePage() {
       <style>{`
         .two-col-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center; }
         .services-grid  { display: grid; grid-template-columns: repeat(3, 1fr); }
-        .beliefs-grid   { display: grid; grid-template-columns: repeat(4, 1fr); }
         .pastor-grid    { display: grid; grid-template-columns: 360px 1fr; }
         .teachings-grid { display: grid; grid-template-columns: repeat(3, 1fr); }
         .contact-grid   { display: grid; grid-template-columns: 1fr 1fr; }
         .hero-times {}
         @media (max-width: 1100px) {
-          .beliefs-grid   { grid-template-columns: repeat(2, 1fr) !important; }
           .pastor-grid    { grid-template-columns: 1fr !important; }
         }
         @media (max-width: 900px) {
@@ -384,7 +381,7 @@ export default function HomePage() {
           .contact-form   { padding: 3rem 2rem !important; }
         }
         @media (max-width: 680px) {
-          .hero-time-item { border-right: none !important; border-bottom: 1px solid rgba(255,255,255,0.07); padding: 0 0 1.5rem !important; }
+          .hero-time-item { border-right: none !important; border-bottom: 1px solid var(--border); padding: 0 0 1.5rem !important; }
           .form-row { grid-template-columns: 1fr !important; }
         }
       `}</style>

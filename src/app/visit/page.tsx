@@ -41,7 +41,7 @@ export default function VisitPage() {
   return (
     <>
       {/* ── HEADER ──────────────────────────────────── */}
-      <div
+      <div className="palette-inverse"
         style={{
           background: "var(--deep)",
           padding: "6rem 2rem 5rem",
@@ -53,7 +53,7 @@ export default function VisitPage() {
       >
         <div aria-hidden style={{ position: "absolute", inset: 0, backgroundImage: "linear-gradient(rgba(184,147,58,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(184,147,58,0.04) 1px,transparent 1px)", backgroundSize: "64px 64px", pointerEvents: "none" }} />
         <div style={{ maxWidth: 680, margin: "0 auto", position: "relative", zIndex: 1 }}>
-          <p style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "0.75rem", fontSize: "0.68rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--gold)", fontWeight: 500, marginBottom: "1.5rem" }}>
+          <p style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "0.75rem", fontSize: "var(--text-meta)", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--gold)", fontWeight: 500, marginBottom: "1.5rem" }}>
             <span style={{ width: 24, height: 1, background: "var(--gold)", opacity: 0.5, display: "inline-block" }} />
             We're Expecting You
             <span style={{ width: 24, height: 1, background: "var(--gold)", opacity: 0.5, display: "inline-block" }} />
@@ -71,7 +71,7 @@ export default function VisitPage() {
             Plan Your{" "}
             <em style={{ fontStyle: "italic", color: "var(--gold)" }}>First Visit</em>
           </h1>
-          <p style={{ fontSize: "1rem", color: "rgba(255,255,255,0.5)", lineHeight: 1.85, maxWidth: 500, margin: "0 auto 3rem" }}>
+          <p style={{ fontSize: "1rem", color: "var(--on-deep-muted)", lineHeight: 1.85, maxWidth: 500, margin: "0 auto 3rem" }}>
             Come as you are. There's a place for you here. Here's everything you need to know before you arrive.
           </p>
           <Link href="/contact" className="btn-gold">
@@ -125,7 +125,7 @@ export default function VisitPage() {
                       justifyContent: "center",
                       fontFamily: "var(--serif)",
                       fontStyle: "italic",
-                      fontSize: "0.9rem",
+                      fontSize: "var(--text-label)",
                       color: "var(--gold)",
                       fontWeight: 600,
                       flexShrink: 0,
@@ -135,7 +135,7 @@ export default function VisitPage() {
                   </span>
                   <h3 style={{ fontSize: "1rem", fontWeight: 500, color: "var(--ink)" }}>{e.title}</h3>
                 </div>
-                <p style={{ fontSize: "0.88rem", color: "var(--ink-muted)", lineHeight: 1.75 }}>{e.desc}</p>
+                <p style={{ fontSize: "var(--text-label)", color: "var(--ink-muted)", lineHeight: 1.75 }}>{e.desc}</p>
               </div>
             ))}
           </div>
@@ -166,14 +166,14 @@ export default function VisitPage() {
             </p>
             <div style={{ display: "flex", flex: 1, flexDirection: "column", gap: "0.6rem" }}>
               {["Safe, supervised environment", "Bible-centred teaching", "Age-appropriate worship", "Available during 10:30 AM Sunday service"].map((item) => (
-                <div key={item} style={{ display: "flex", alignItems: "center", gap: "0.75rem", fontSize: "0.9rem", color: "var(--ink-muted)" }}>
+                <div key={item} style={{ display: "flex", alignItems: "center", gap: "0.75rem", fontSize: "var(--text-label)", color: "var(--ink-muted)" }}>
                   <span style={{ width: 6, height: 6, borderRadius: "50%", background: "var(--gold)", flexShrink: 0 }} />
                   {item}
                 </div>
               ))}
             </div>
           </div>
-          <div
+          <div className="palette-inverse"
             style={{
               background: "var(--deep)",
               padding: "3rem",
@@ -183,15 +183,15 @@ export default function VisitPage() {
               gap: "1.5rem",
             }}
           >
-            <p style={{ fontFamily: "var(--serif)", fontSize: "0.75rem", letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--gold)" }}>A Note to Parents</p>
+            <p style={{ fontFamily: "var(--serif)", fontSize: "var(--text-meta)", letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--gold)" }}>A Note to Parents</p>
             <p style={{ fontFamily: "var(--serif)", fontSize: "1.3rem", fontStyle: "italic", color: "white", lineHeight: 1.6 }}>
               "Train up a child in the way he should go; even when he is old he will not depart from it."
             </p>
-            <p style={{ fontSize: "0.72rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "rgba(255,255,255,0.35)", fontWeight: 500 }}>
+            <p style={{ fontSize: "var(--text-meta)", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--on-deep-muted)", fontWeight: 500 }}>
               Proverbs 22:6
             </p>
             <div style={{ height: 1, background: "rgba(255,255,255,0.08)" }} />
-            <p style={{ fontSize: "0.86rem", color: "rgba(255,255,255,0.5)", lineHeight: 1.7 }}>
+            <p style={{ fontSize: "var(--text-label)", color: "var(--on-deep-muted)", lineHeight: 1.7 }}>
               At CAC Miracle Centre, we believe that raising children in the faith is a sacred responsibility. Our youth programmes are designed to complement what parents teach at home.
             </p>
           </div>
@@ -210,10 +210,10 @@ export default function VisitPage() {
           <div style={{ display: "flex", flexDirection: "column", gap: "1.5px", background: "var(--border)" }}>
             {faqs.map((faq, i) => (
               <div key={i} style={{ background: "var(--warm-white)", padding: "1.75rem 2rem" }}>
-                <p style={{ fontSize: "0.95rem", fontWeight: 500, color: "var(--ink)", marginBottom: "0.5rem" }}>
+                <p style={{ fontSize: "var(--text-label)", fontWeight: 500, color: "var(--ink)", marginBottom: "0.5rem" }}>
                   {faq.q}
                 </p>
-                <p style={{ fontSize: "0.88rem", color: "var(--ink-muted)", lineHeight: 1.7 }}>
+                <p style={{ fontSize: "var(--text-label)", color: "var(--ink-muted)", lineHeight: 1.7 }}>
                   {faq.a}
                 </p>
               </div>
@@ -223,9 +223,9 @@ export default function VisitPage() {
       </section>
 
       {/* ── LOCATION CTA ────────────────────────────── */}
-      <div
+      <div className="on-gold"
         style={{
-          background: "var(--gold)",
+          background: "var(--button)",
           padding: "4rem 2rem",
           textAlign: "center",
         }}
@@ -236,13 +236,13 @@ export default function VisitPage() {
               fontFamily: "var(--serif)",
               fontSize: "2.5rem",
               fontWeight: 400,
-              color: "white",
+              color: "var(--on-button)",
               marginBottom: "0.75rem",
             }}
           >
             We'd Love to See You Sunday
           </h2>
-          <p style={{ fontSize: "1rem", color: "rgba(255,255,255,0.75)", marginBottom: "2rem", lineHeight: 1.7 }}>
+          <p style={{ fontSize: "1rem", color: "var(--on-button)", marginBottom: "2rem", lineHeight: 1.7 }}>
             No matter where you are in your faith journey, there is a place for you at Miracle Centre.
           </p>
           <Link
@@ -252,7 +252,7 @@ export default function VisitPage() {
               padding: "0.9rem 2.5rem",
               background: "var(--deep)",
               color: "white",
-              fontSize: "0.82rem",
+              fontSize: "var(--text-meta)",
               fontWeight: 500,
               letterSpacing: "0.07em",
               textTransform: "uppercase",

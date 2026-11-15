@@ -73,7 +73,7 @@ export default function TeachingsContent() {
           </div>
 
           {/* Search */}
-          <div style={{ position: "relative", width: 280, flexShrink: 0 }}>
+          <div style={{ position: "relative", width: 280, maxWidth: "100%" }}>
             <Search
               size={14}
               style={{
@@ -92,12 +92,12 @@ export default function TeachingsContent() {
               style={{
                 width: "100%",
                 padding: "0.75rem 1rem 0.75rem 2.4rem",
-                border: "1px solid var(--border)",
+                border: "1px solid var(--control-border)",
                 borderRadius: 3,
                 background: "var(--warm-white)",
                 color: "var(--ink)",
                 fontFamily: "var(--sans)",
-                fontSize: "0.88rem",
+                fontSize: "var(--text-label)",
                 outline: "none",
               }}
             />
@@ -130,7 +130,7 @@ export default function TeachingsContent() {
               onClick={() => setActiveCategory(cat)}
               style={{
                 padding: "1rem 1.1rem",
-                fontSize: "0.76rem",
+                fontSize: "var(--text-label)",
                 fontWeight: 400,
                 letterSpacing: "0.04em",
                 color:
@@ -186,7 +186,7 @@ export default function TeachingsContent() {
               >
                 No teachings found
               </p>
-              <p style={{ fontSize: "0.88rem" }}>
+              <p style={{ fontSize: "var(--text-label)" }}>
                 Try a different search term or category.
               </p>
             </div>
@@ -207,7 +207,7 @@ export default function TeachingsContent() {
                   <div style={{ padding: "2rem 2.5rem" }}>
                     <p
                       style={{
-                        fontSize: "0.62rem",
+                        fontSize: "var(--text-meta)",
                         letterSpacing: "0.14em",
                         textTransform: "uppercase",
                         color: "var(--gold)",
@@ -268,7 +268,7 @@ export default function TeachingsContent() {
                       </h2>
                       <p
                         style={{
-                          fontSize: "0.88rem",
+                          fontSize: "var(--text-body)",
                           color: "var(--ink-muted)",
                           lineHeight: 1.7,
                           marginBottom: "1rem",
@@ -290,7 +290,7 @@ export default function TeachingsContent() {
                           </span>
                         ))}
                       </div>
-                      <p style={{ fontSize: "0.75rem", color: "var(--ink-faint)" }}>
+                      <p style={{ fontSize: "var(--text-meta)", color: "var(--ink-faint)" }}>
                         {post.author} · {post.readTime} min read
                       </p>
                     </div>
@@ -300,7 +300,7 @@ export default function TeachingsContent() {
                         fontFamily: "var(--serif)",
                         fontSize: "3rem",
                         fontWeight: 600,
-                        color: "var(--border)",
+                        color: "var(--ink-faint)",
                         lineHeight: 1,
                         textAlign: "right",
                         paddingTop: "0.25rem",
@@ -321,7 +321,7 @@ export default function TeachingsContent() {
           style={{ position: "sticky", top: "calc(var(--nav-h) + 80px)" }}
         >
           {/* Subscribe CTA */}
-          <div
+          <div className="palette-inverse"
             style={{
               background: "var(--deep)",
               padding: "1.75rem",
@@ -343,8 +343,8 @@ export default function TeachingsContent() {
             </h3>
             <p
               style={{
-                fontSize: "0.82rem",
-                color: "rgba(255,255,255,0.55)",
+                fontSize: "var(--text-label)",
+                color: "var(--on-deep-muted)",
                 marginBottom: "1rem",
                 lineHeight: 1.6,
               }}
@@ -358,11 +358,11 @@ export default function TeachingsContent() {
                 width: "100%",
                 padding: "0.65rem 0.85rem",
                 background: "rgba(255,255,255,0.08)",
-                border: "1px solid rgba(255,255,255,0.15)",
+                border: "1px solid var(--control-border)",
                 borderRadius: 2,
                 color: "white",
                 fontFamily: "var(--sans)",
-                fontSize: "0.85rem",
+                fontSize: "var(--text-label)",
                 marginBottom: "0.6rem",
                 outline: "none",
               }}
@@ -401,7 +401,7 @@ export default function TeachingsContent() {
             </p>
             <cite
               style={{
-                fontSize: "0.72rem",
+                fontSize: "var(--text-meta)",
                 letterSpacing: "0.08em",
                 textTransform: "uppercase",
                 color: "var(--gold)",
@@ -430,7 +430,7 @@ export default function TeachingsContent() {
             >
               <h3
                 style={{
-                  fontSize: "0.68rem",
+                  fontSize: "var(--text-meta)",
                   letterSpacing: "0.1em",
                   textTransform: "uppercase",
                   color: "var(--ink-faint)",
@@ -467,7 +467,7 @@ export default function TeachingsContent() {
                       borderRight: "none",
                       cursor: "pointer",
                       fontFamily: "var(--sans)",
-                      fontSize: "0.86rem",
+                      fontSize: "var(--text-meta)",
                       color:
                         activeCategory === cat
                           ? "var(--gold)"
@@ -479,7 +479,7 @@ export default function TeachingsContent() {
                     <span>{cat}</span>
                     <span
                       style={{
-                        fontSize: "0.75rem",
+                        fontSize: "var(--text-meta)",
                         color: "var(--ink-faint)",
                         background: "var(--cream)",
                         padding: "0.15rem 0.5rem",

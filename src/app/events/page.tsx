@@ -80,7 +80,7 @@ export default function EventsPage() {
             {/* Date block */}
             <div
               style={{
-                background: "var(--gold)",
+                background: "var(--button)",
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "center",
@@ -89,13 +89,13 @@ export default function EventsPage() {
                 textAlign: "center",
               }}
             >
-              <p style={{ fontSize: "3rem", fontFamily: "var(--serif)", fontWeight: 600, color: "white", lineHeight: 1 }}>
+              <p style={{ fontSize: "3rem", fontFamily: "var(--serif)", fontWeight: 600, color: "var(--on-button)", lineHeight: 1 }}>
                 {formatDate(next.date).day}
               </p>
-              <p style={{ fontSize: "1rem", fontWeight: 500, color: "rgba(255,255,255,0.85)", textTransform: "uppercase", letterSpacing: "0.1em" }}>
+              <p style={{ fontSize: "1rem", fontWeight: 500, color: "var(--on-button)", textTransform: "uppercase", letterSpacing: "0.1em" }}>
                 {formatDate(next.date).month}
               </p>
-              <p style={{ fontSize: "0.75rem", color: "rgba(255,255,255,0.55)", marginTop: "0.25rem" }}>
+              <p style={{ fontSize: "var(--text-meta)", color: "var(--on-button)", marginTop: "0.25rem" }}>
                 {formatDate(next.date).year}
               </p>
             </div>
@@ -105,7 +105,7 @@ export default function EventsPage() {
               <span
                 style={{
                   display: "inline-block",
-                  fontSize: "0.62rem",
+                  fontSize: "var(--text-meta)",
                   letterSpacing: "0.1em",
                   textTransform: "uppercase",
                   color: "var(--gold)",
@@ -130,17 +130,17 @@ export default function EventsPage() {
               >
                 {next.title}
               </h2>
-              <p style={{ fontSize: "0.9rem", color: "var(--ink-muted)", lineHeight: 1.7, marginBottom: "1.25rem" }}>
+              <p style={{ fontSize: "var(--text-label)", color: "var(--ink-muted)", lineHeight: 1.7, marginBottom: "1.25rem" }}>
                 {next.description}
               </p>
               <div style={{ display: "flex", gap: "1.5rem", flexWrap: "wrap" }}>
-                <span style={{ display: "flex", alignItems: "center", gap: "0.4rem", fontSize: "0.8rem", color: "var(--ink-faint)" }}>
+                <span style={{ display: "flex", alignItems: "center", gap: "0.4rem", fontSize: "var(--text-meta)", color: "var(--ink-faint)" }}>
                   <Calendar size={13} /> {formatDate(next.date).full}
                 </span>
-                <span style={{ display: "flex", alignItems: "center", gap: "0.4rem", fontSize: "0.8rem", color: "var(--ink-faint)" }}>
+                <span style={{ display: "flex", alignItems: "center", gap: "0.4rem", fontSize: "var(--text-meta)", color: "var(--ink-faint)" }}>
                   <Clock size={13} /> {next.time}
                 </span>
-                <span style={{ display: "flex", alignItems: "center", gap: "0.4rem", fontSize: "0.8rem", color: "var(--ink-faint)" }}>
+                <span style={{ display: "flex", alignItems: "center", gap: "0.4rem", fontSize: "var(--text-meta)", color: "var(--ink-faint)" }}>
                   <MapPin size={13} /> {next.location}
                 </span>
               </div>
@@ -187,7 +187,7 @@ export default function EventsPage() {
                     </p>
                     <p
                       style={{
-                        fontSize: "0.68rem",
+                        fontSize: "var(--text-meta)",
                         letterSpacing: "0.1em",
                         textTransform: "uppercase",
                         color: "var(--ink-faint)",
@@ -202,7 +202,7 @@ export default function EventsPage() {
                     <div style={{ display: "flex", alignItems: "center", gap: "0.6rem", marginBottom: "0.4rem" }}>
                       <span
                         style={{
-                          fontSize: "0.6rem",
+                          fontSize: "var(--text-meta)",
                           letterSpacing: "0.1em",
                           textTransform: "uppercase",
                           color: categoryColors[event.category] ?? "var(--gold)",
@@ -223,14 +223,14 @@ export default function EventsPage() {
                     >
                       {event.title}
                     </h3>
-                    <p style={{ fontSize: "0.83rem", color: "var(--ink-muted)", lineHeight: 1.6 }}>
+                    <p style={{ fontSize: "var(--text-label)", color: "var(--ink-muted)", lineHeight: 1.6 }}>
                       {event.description}
                     </p>
                     <div style={{ display: "flex", gap: "1rem", marginTop: "0.5rem", flexWrap: "wrap" }}>
-                      <span style={{ fontSize: "0.73rem", color: "var(--ink-faint)", display: "flex", alignItems: "center", gap: "0.3rem" }}>
+                      <span style={{ fontSize: "var(--text-meta)", color: "var(--ink-faint)", display: "flex", alignItems: "center", gap: "0.3rem" }}>
                         <Clock size={11} /> {event.time}
                       </span>
-                      <span style={{ fontSize: "0.73rem", color: "var(--ink-faint)", display: "flex", alignItems: "center", gap: "0.3rem" }}>
+                      <span style={{ fontSize: "var(--text-meta)", color: "var(--ink-faint)", display: "flex", alignItems: "center", gap: "0.3rem" }}>
                         <MapPin size={11} /> {event.location}
                       </span>
                     </div>
@@ -238,7 +238,7 @@ export default function EventsPage() {
 
                   {/* Action */}
                   <div style={{ flexShrink: 0 }}>
-                    <button className="btn-outline" style={{ padding: "0.5rem 1rem", fontSize: "0.72rem" }}>
+                    <button className="btn-outline" style={{ padding: "0.5rem 1rem" }}>
                       Learn More
                     </button>
                   </div>
@@ -264,9 +264,9 @@ export default function EventsPage() {
             ].map((p) => (
               <div key={p.day} style={{ background: "var(--cream)", padding: "2.5rem 2rem", textAlign: "center" }}>
                 <p style={{ fontSize: "2rem", marginBottom: "0.75rem" }}>{p.icon}</p>
-                <p style={{ fontSize: "0.62rem", letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--gold)", fontWeight: 500, marginBottom: "0.4rem" }}>{p.day}</p>
+                <p style={{ fontSize: "var(--text-meta)", letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--gold)", fontWeight: 500, marginBottom: "0.4rem" }}>{p.day}</p>
                 <p style={{ fontFamily: "var(--serif)", fontSize: "1.35rem", fontWeight: 500, color: "var(--ink)", marginBottom: "0.3rem" }}>{p.name}</p>
-                <p style={{ fontSize: "0.88rem", color: "var(--ink-faint)", fontFamily: "var(--serif)", fontStyle: "italic" }}>{p.time}</p>
+                <p style={{ fontSize: "var(--text-label)", color: "var(--ink-faint)", fontFamily: "var(--serif)", fontStyle: "italic" }}>{p.time}</p>
               </div>
             ))}
           </div>

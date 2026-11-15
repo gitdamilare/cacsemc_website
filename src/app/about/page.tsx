@@ -116,7 +116,7 @@ export default function AboutPage() {
                 <div key={m.label} style={{ background: "var(--cream)", padding: "2rem" }}>
                   <p
                     style={{
-                      fontSize: "0.62rem",
+                      fontSize: "var(--text-meta)",
                       letterSpacing: "0.14em",
                       textTransform: "uppercase",
                       color: "var(--gold)",
@@ -139,14 +139,14 @@ export default function AboutPage() {
                         justifyContent: "center",
                         fontFamily: "var(--serif)",
                         fontStyle: "italic",
-                        fontSize: "0.9rem",
+                        fontSize: "var(--text-label)",
                       }}
                     >
                       {m.icon}
                     </span>
                     {m.label}
                   </p>
-                  <p style={{ fontSize: "0.92rem", color: "var(--ink-muted)", lineHeight: 1.75 }}>
+                  <p style={{ fontSize: "var(--text-label)", color: "var(--ink-muted)", lineHeight: 1.75 }}>
                     {m.text}
                   </p>
                 </div>
@@ -180,7 +180,6 @@ export default function AboutPage() {
           <div
             style={{
               display: "grid",
-              gridTemplateColumns: "repeat(4,1fr)",
               gap: "1.5px",
               background: "var(--border)",
             }}
@@ -189,8 +188,8 @@ export default function AboutPage() {
             {beliefs.map((b, i) => (
               <div key={i} style={{ background: "var(--warm-white)", padding: "2.5rem 1.75rem" }}>
                 <p style={{ fontFamily: "var(--serif)", fontSize: "2.2rem", color: "var(--gold)", fontStyle: "italic", opacity: 0.6, marginBottom: "1rem" }}>{b.glyph}</p>
-                <p style={{ fontFamily: "var(--serif)", fontSize: "1.1rem", fontWeight: 500, color: "var(--ink)", marginBottom: "0.5rem" }}>{b.title}</p>
-                <p style={{ fontSize: "0.82rem", color: "var(--ink-muted)", lineHeight: 1.7 }}>{b.description}</p>
+                <h3 className="belief-title">{b.title}</h3>
+                <p className="belief-description">{b.description}</p>
               </div>
             ))}
           </div>
@@ -232,7 +231,7 @@ export default function AboutPage() {
                 >
                   <span
                     style={{
-                      fontSize: "0.72rem",
+                      fontSize: "var(--text-meta)",
                       letterSpacing: "0.06em",
                       textTransform: "uppercase",
                       color: "var(--gold)",
@@ -244,7 +243,7 @@ export default function AboutPage() {
                   >
                     {s.ref}
                   </span>
-                  <span style={{ fontSize: "0.92rem", color: "var(--ink-muted)", lineHeight: 1.6 }}>
+                  <span style={{ fontSize: "var(--text-label)", color: "var(--ink-muted)", lineHeight: 1.6 }}>
                     {s.text}
                   </span>
                 </div>
@@ -259,10 +258,6 @@ export default function AboutPage() {
       <style>{`
         @media (max-width: 900px) {
           .two-col { grid-template-columns: 1fr !important; gap: 3rem !important; }
-          .beliefs-grid { grid-template-columns: repeat(2,1fr) !important; }
-        }
-        @media (max-width: 560px) {
-          .beliefs-grid { grid-template-columns: 1fr !important; }
         }
       `}</style>
     </>

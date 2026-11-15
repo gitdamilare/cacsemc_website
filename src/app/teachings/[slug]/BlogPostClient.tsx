@@ -63,7 +63,7 @@ function renderContent(content: string) {
           <p
             style={{
               fontFamily: "var(--sans)",
-              fontSize: "0.68rem",
+              fontSize: "var(--text-meta)",
               fontWeight: 500,
               letterSpacing: "0.12em",
               textTransform: "uppercase",
@@ -83,7 +83,7 @@ function renderContent(content: string) {
                 <div
                   key={j}
                   style={{
-                    fontSize: "0.9rem",
+                    fontSize: "1em",
                     fontWeight: 500,
                     color: "var(--ink)",
                     padding: "0.6rem 0.75rem",
@@ -92,7 +92,7 @@ function renderContent(content: string) {
                     marginTop: "0.5rem",
                   }}
                 >
-                  <span style={{ fontWeight: 400, color: "var(--gold)", fontSize: "0.68rem", letterSpacing: "0.08em", textTransform: "uppercase", display: "block", marginBottom: "0.2rem" }}>Apply</span>
+                  <span style={{ fontWeight: 400, color: "var(--gold)", fontSize: "var(--text-meta)", letterSpacing: "0.08em", textTransform: "uppercase", display: "block", marginBottom: "0.2rem" }}>Apply</span>
                   {cleaned.replace("*Application:*", "").replace("*Application:", "").trim()}
                 </div>
               );
@@ -101,7 +101,7 @@ function renderContent(content: string) {
               <p
                 key={j}
                 style={{
-                  fontSize: "0.9rem",
+                  fontSize: "1em",
                   color: isExample ? "var(--ink-muted)" : "var(--ink)",
                   fontStyle: isExample ? "italic" : "normal",
                   lineHeight: 1.7,
@@ -164,7 +164,8 @@ export default function BlogPostClient({ post }: { post: BlogPost }) {
 
   const toc = post.content ? extractTOC(post.content) : [];
 
-  const fontSizeMap = { sm: "1rem", md: "1.15rem", lg: "1.3rem" };
+  const fontSizeMap = { sm: "1.125rem", md: "1.25rem", lg: "1.5rem" };
+  const fontSizeLabels = { sm: "Smaller", md: "Standard", lg: "Larger" };
 
   useEffect(() => {
     const onScroll = () => {
@@ -219,9 +220,9 @@ export default function BlogPostClient({ post }: { post: BlogPost }) {
         style={{
           maxWidth: 1100,
           margin: "0 auto",
-          padding: "0 2rem",
+          padding: "0 clamp(1rem, 4vw, 2rem)",
           display: "grid",
-          gridTemplateColumns: "1fr 260px",
+          gridTemplateColumns: "minmax(0, 1fr) 260px",
           gap: "5rem",
           alignItems: "start",
         }}
@@ -239,20 +240,23 @@ export default function BlogPostClient({ post }: { post: BlogPost }) {
           }}
         >
           {/* Font size controls */}
-          <div
+          <div className="article-text-size" role="group" aria-label="Text size"
             style={{
               display: "flex",
               alignItems: "center",
               gap: "0.5rem",
+              flexWrap: "wrap",
               marginBottom: "2.5rem",
               paddingBottom: "1.5rem",
               borderBottom: "1px solid var(--border-soft)",
             }}
           >
-            <span style={{ fontSize: "0.68rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--ink-faint)" }}>Text size:</span>
+            <span style={{ fontSize: "var(--text-meta)", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--ink-faint)" }}>Text size:</span>
             {(["sm", "md", "lg"] as const).map((s) => (
               <button
                 key={s}
+                type="button"
+                aria-pressed={fontSize === s}
                 onClick={() => setFontSize(s)}
                 style={{
                   padding: "0.3rem 0.6rem",
@@ -262,12 +266,12 @@ export default function BlogPostClient({ post }: { post: BlogPost }) {
                   background: fontSize === s ? "var(--gold-pale)" : "none",
                   color: fontSize === s ? "var(--gold)" : "var(--ink-muted)",
                   fontFamily: "var(--sans)",
-                  fontSize: s === "sm" ? "0.8rem" : s === "md" ? "0.95rem" : "1.1rem",
+                  fontSize: "var(--text-label)",
                   cursor: "pointer",
                   transition: "all var(--transition)",
                 }}
               >
-                A
+                {fontSizeLabels[s]}
               </button>
             ))}
           </div>
@@ -291,8 +295,8 @@ export default function BlogPostClient({ post }: { post: BlogPost }) {
                   background: "var(--gold-pale)",
                 }}
               >
-                <p style={{ fontSize: "0.62rem", letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--gold)", fontWeight: 500, marginBottom: "0.5rem" }}>Key Truth</p>
-                <p style={{ fontFamily: "var(--serif)", fontSize: "1.15rem", lineHeight: 1.6, color: "var(--ink)", margin: 0 }}>
+                <p style={{ fontSize: "var(--text-meta)", letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--gold)", fontWeight: 500, marginBottom: "0.5rem" }}>Key Truth</p>
+                <p style={{ fontFamily: "var(--serif)", fontSize: "1em", lineHeight: 1.6, color: "var(--ink)", margin: 0 }}>
                   {post.excerpt}
                 </p>
               </div>
@@ -309,18 +313,18 @@ export default function BlogPostClient({ post }: { post: BlogPost }) {
                 }}
               >
                 <span style={{ fontFamily: "var(--serif)", fontSize: "4rem", color: "var(--gold)", opacity: 0.15, position: "absolute", top: "-1rem", left: "1.5rem", lineHeight: 1 }}>&quot;</span>
-                <p style={{ fontFamily: "var(--serif)", fontSize: "1.3rem", fontStyle: "italic", lineHeight: 1.6, color: "var(--ink)", marginBottom: "0.75rem" }}>
+                <p style={{ fontFamily: "var(--serif)", fontSize: "1em", fontStyle: "italic", lineHeight: 1.6, color: "var(--ink)", marginBottom: "0.75rem" }}>
                   But seek first the kingdom of God and His righteousness, and all these things will be added to you.
                 </p>
-                <p style={{ fontSize: "0.72rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--gold)", fontWeight: 500 }}>Matthew 6:33</p>
+                <p style={{ fontSize: "var(--text-meta)", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--gold)", fontWeight: 500 }}>Matthew 6:33</p>
               </div>
 
-              <p style={{ marginBottom: "1.5rem", color: "var(--ink-muted)", fontSize: "0.95rem", textAlign: "center", fontStyle: "italic" }}>
+              <p style={{ marginBottom: "1.5rem", color: "var(--ink-muted)", fontSize: "var(--text-label)", textAlign: "center", fontStyle: "italic" }}>
                 Full content of this teaching available in print or on request.
               </p>
 
               {/* Closing prayer */}
-              <div
+              <div className="palette-inverse"
                 style={{
                   margin: "3rem 0",
                   padding: "2.5rem",
@@ -329,8 +333,8 @@ export default function BlogPostClient({ post }: { post: BlogPost }) {
                   textAlign: "center",
                 }}
               >
-                <h3 style={{ fontFamily: "var(--sans)", fontSize: "0.68rem", letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--gold)", fontWeight: 500, marginBottom: "1rem" }}>Closing Prayer</h3>
-                <p style={{ fontFamily: "var(--serif)", fontSize: "1.1rem", fontStyle: "italic", color: "rgba(255,255,255,0.8)", lineHeight: 1.8 }}>
+                <h3 style={{ fontFamily: "var(--sans)", fontSize: "var(--text-meta)", letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--gold)", fontWeight: 500, marginBottom: "1rem" }}>Closing Prayer</h3>
+                <p style={{ fontFamily: "var(--serif)", fontSize: "1em", fontStyle: "italic", color: "var(--on-deep-muted)", lineHeight: 1.8 }}>
                   "Lord, let Your Word transform my life from the inside out.<br />
                   Let my character reflect Christ in all I do.<br />
                   In Jesus' Name. Amen."
@@ -344,7 +348,7 @@ export default function BlogPostClient({ post }: { post: BlogPost }) {
         <aside style={{ paddingTop: "3.5rem", position: "sticky", top: "calc(var(--nav-h) + 80px)" }} className="post-sidebar">
           {/* Progress */}
           <div style={{ marginBottom: "2rem" }}>
-            <p style={{ fontSize: "0.68rem", letterSpacing: "0.08em", textTransform: "uppercase", color: "var(--ink-faint)", marginBottom: "0.5rem" }}>
+            <p style={{ fontSize: "var(--text-meta)", letterSpacing: "0.08em", textTransform: "uppercase", color: "var(--ink-faint)", marginBottom: "0.5rem" }}>
               Reading progress
             </p>
             <div style={{ height: 2, background: "var(--border)", borderRadius: 2, overflow: "hidden" }}>
@@ -355,7 +359,7 @@ export default function BlogPostClient({ post }: { post: BlogPost }) {
           {/* TOC */}
           {toc.length > 0 && (
             <div style={{ marginBottom: "1.5rem" }}>
-              <p style={{ fontSize: "0.68rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--ink-faint)", fontWeight: 500, marginBottom: "1rem" }}>
+              <p style={{ fontSize: "var(--text-meta)", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--ink-faint)", fontWeight: 500, marginBottom: "1rem" }}>
                 In this article
               </p>
               {toc.map((item) => (
@@ -365,7 +369,7 @@ export default function BlogPostClient({ post }: { post: BlogPost }) {
                   style={{
                     display: "block",
                     padding: "0.45rem 0.75rem",
-                    fontSize: "0.82rem",
+                    fontSize: "var(--text-label)",
                     lineHeight: 1.4,
                     color: activeToc === item.id ? "var(--gold)" : "var(--ink-muted)",
                     borderLeft: `2px solid ${activeToc === item.id ? "var(--gold)" : "transparent"}`,
@@ -384,7 +388,7 @@ export default function BlogPostClient({ post }: { post: BlogPost }) {
 
           {/* Share */}
           <div>
-            <p style={{ fontSize: "0.68rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--ink-faint)", fontWeight: 500, marginBottom: "0.75rem" }}>
+            <p style={{ fontSize: "var(--text-meta)", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--ink-faint)", fontWeight: 500, marginBottom: "0.75rem" }}>
               Share this teaching
             </p>
             <div style={{ display: "flex", flexDirection: "column", gap: "0.4rem" }}>
@@ -392,7 +396,7 @@ export default function BlogPostClient({ post }: { post: BlogPost }) {
                 <button
                   key={s}
                   className="btn-outline"
-                  style={{ padding: "0.5rem 0.85rem", fontSize: "0.75rem", textAlign: "left", justifyContent: "flex-start" }}
+                  style={{ padding: "0.5rem 0.85rem", textAlign: "left", justifyContent: "flex-start" }}
                 >
                   {s}
                 </button>

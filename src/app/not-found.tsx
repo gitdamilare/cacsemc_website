@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function NotFound() {
   return (
-    <div
+    <div className="palette-inverse"
       style={{
         minHeight: "100vh",
         background: "var(--deep)",
@@ -86,7 +86,7 @@ export default function NotFound() {
         <p
           style={{
             fontSize: "1rem",
-            color: "rgba(255,255,255,0.45)",
+            color: "var(--on-deep-muted)",
             lineHeight: 1.8,
             marginBottom: "2.5rem",
           }}
@@ -110,7 +110,7 @@ export default function NotFound() {
               fontFamily: "var(--serif)",
               fontSize: "1rem",
               fontStyle: "italic",
-              color: "rgba(255,255,255,0.65)",
+              color: "var(--on-deep-muted)",
               lineHeight: 1.65,
               marginBottom: "0.5rem",
             }}
@@ -119,7 +119,7 @@ export default function NotFound() {
           </p>
           <p
             style={{
-              fontSize: "0.68rem",
+              fontSize: "var(--text-meta)",
               letterSpacing: "0.1em",
               textTransform: "uppercase",
               color: "var(--gold)",
@@ -145,11 +145,11 @@ export default function NotFound() {
           <Link
             href="/teachings"
             style={{
-              fontSize: "0.82rem",
+              fontSize: "var(--text-meta)",
               fontWeight: 400,
               letterSpacing: "0.07em",
               textTransform: "uppercase",
-              color: "rgba(255,255,255,0.6)",
+              color: "var(--on-deep-muted)",
               padding: "0.85rem 2rem",
               borderRadius: 2,
               textDecoration: "none",
@@ -183,10 +183,10 @@ export default function NotFound() {
               key={link.href}
               href={link.href}
               style={{
-                fontSize: "0.78rem",
+                fontSize: "var(--text-meta)",
                 letterSpacing: "0.08em",
                 textTransform: "uppercase",
-                color: "rgba(255,255,255,0.3)",
+                color: "var(--on-deep-muted)",
                 textDecoration: "none",
                 transition: "color var(--transition)",
               }}

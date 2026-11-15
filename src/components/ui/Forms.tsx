@@ -127,13 +127,14 @@ export function NewsletterForm({
         placeholder="Enter your email address"
         style={{
           flex: 1,
+          minWidth: 0,
           padding: "0.9rem 1.1rem",
           background: dark ? "rgba(255,255,255,0.08)" : "var(--cream)",
           border: dark ? "1px solid rgba(255,255,255,0.15)" : "none",
           borderRight: "none",
           color: dark ? "white" : "var(--ink)",
           fontFamily: "var(--sans)",
-          fontSize: "0.88rem",
+          fontSize: "var(--text-label)",
           outline: "none",
         }}
       />
@@ -154,14 +155,14 @@ export function SubscribeForm() {
       onSubmit={(e) => e.preventDefault()}
       style={{ display: "flex", flexDirection: "column", gap: "0.85rem" }}
     >
-      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "0.75rem" }}>
-        <div style={{ display: "flex", flexDirection: "column", gap: "0.3rem" }}>
+      <div className="form-row-grid" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 10rem), 1fr))", gap: "0.75rem" }}>
+        <div style={{ display: "flex", flexDirection: "column", gap: "0.3rem", minWidth: 0 }}>
           <label
             style={{
-              fontSize: "0.65rem",
+              fontSize: "var(--text-label)",
               letterSpacing: "0.08em",
               textTransform: "uppercase",
-              color: "rgba(255,255,255,0.4)",
+              color: "var(--on-deep-muted)",
             }}
           >
             First name
@@ -176,18 +177,18 @@ export function SubscribeForm() {
               borderRadius: 2,
               color: "white",
               fontFamily: "var(--sans)",
-              fontSize: "0.88rem",
+              fontSize: "var(--text-label)",
               outline: "none",
             }}
           />
         </div>
-        <div style={{ display: "flex", flexDirection: "column", gap: "0.3rem" }}>
+        <div style={{ display: "flex", flexDirection: "column", gap: "0.3rem", minWidth: 0 }}>
           <label
             style={{
-              fontSize: "0.65rem",
+              fontSize: "var(--text-label)",
               letterSpacing: "0.08em",
               textTransform: "uppercase",
-              color: "rgba(255,255,255,0.4)",
+              color: "var(--on-deep-muted)",
             }}
           >
             Last name
@@ -202,7 +203,7 @@ export function SubscribeForm() {
               borderRadius: 2,
               color: "white",
               fontFamily: "var(--sans)",
-              fontSize: "0.88rem",
+              fontSize: "var(--text-label)",
               outline: "none",
             }}
           />
@@ -211,10 +212,10 @@ export function SubscribeForm() {
       <div style={{ display: "flex", flexDirection: "column", gap: "0.3rem" }}>
         <label
           style={{
-            fontSize: "0.65rem",
+            fontSize: "var(--text-label)",
             letterSpacing: "0.08em",
             textTransform: "uppercase",
-            color: "rgba(255,255,255,0.4)",
+            color: "var(--on-deep-muted)",
           }}
         >
           Email address
@@ -229,7 +230,7 @@ export function SubscribeForm() {
             borderRadius: 2,
             color: "white",
             fontFamily: "var(--sans)",
-            fontSize: "0.88rem",
+            fontSize: "var(--text-label)",
             outline: "none",
           }}
         />
@@ -243,8 +244,8 @@ export function SubscribeForm() {
       </button>
       <p
         style={{
-          fontSize: "0.72rem",
-          color: "rgba(255,255,255,0.25)",
+          fontSize: "var(--text-meta)",
+          color: "var(--on-deep-muted)",
           textAlign: "center",
         }}
       >
@@ -271,12 +272,13 @@ export function GoldBannerForm() {
         placeholder="Your email address"
         style={{
           flex: 1,
+          minWidth: 0,
           padding: "0.9rem 1.1rem",
-          background: "rgba(255,255,255,0.2)",
+          background: "var(--warm-white)",
           border: "none",
-          color: "white",
+          color: "var(--ink)",
           fontFamily: "var(--sans)",
-          fontSize: "0.88rem",
+          fontSize: "var(--text-label)",
           outline: "none",
         }}
       />
@@ -288,7 +290,7 @@ export function GoldBannerForm() {
           border: "none",
           color: "white",
           fontFamily: "var(--sans)",
-          fontSize: "0.78rem",
+          fontSize: "var(--text-label)",
           fontWeight: 500,
           letterSpacing: "0.06em",
           textTransform: "uppercase",

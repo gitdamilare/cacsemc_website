@@ -4,38 +4,50 @@
   :root {
     --serif: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
     --sans:  'DM Sans', system-ui, -apple-system, sans-serif;
-    --cream: #F7F4EE;
-    --warm-white: #FDFCFA;
-    --ink: #1A1714;
-    --ink-muted: #5A5650;
-    --ink-faint: #9E9890;
-    --gold: #B8933A;
-    --gold-dark: #9A7C2E;
-    --gold-light: #E8D9B5;
-    --gold-pale: #F5EED8;
-    --deep: #2C1A0E;
-    --border: rgba(26, 23, 20, 0.10);
-    --border-soft: rgba(26, 23, 20, 0.06);
+    --cream: #F7F0E3;
+    --warm-white: #FFFDF8;
+    --ink: #241B14;
+    --ink-muted: #55463B;
+    --ink-faint: #655549;
+    --gold: #765213;
+    --gold-dark: #765213;
+    --gold-light: #E8D7AC;
+    --gold-pale: #F3E5C5;
+    --deep: #302218;
+    --border: #D8CABA;
+    --border-soft: #E2D7CC;
     --serif: 'Cormorant Garamond', Georgia, serif;
     --sans: 'DM Sans', system-ui, sans-serif;
     --transition: 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+    --gold-on-deep: #F3CC82;
+    --on-deep-muted: #F0E6D8;
+    --button: #E9C477;
+    --button-hover: #F4D69B;
+    --on-button: #271C0F;
+    --control-border: #8C7865;
+    --focus: #794807;
+    --text-meta: 0.875rem;
+    --text-label: 1rem;
+    --text-body: 1.125rem;
     --nav-h: 68px;
   }
 
   @media (prefers-color-scheme: dark) {
     :root {
-      --cream: #1E1B17;
-      --warm-white: #171410;
-      --ink: #F0EDE6;
-      --ink-muted: #A8A098;
-      --ink-faint: #6A6460;
-      --gold: #C9A84C;
-      --gold-dark: #B89035;
-      --gold-light: #3A3020;
-      --gold-pale: #2A2418;
-      --deep: #0E0A06;
-      --border: rgba(240, 237, 230, 0.10);
-      --border-soft: rgba(240, 237, 230, 0.06);
+      --cream: #251C15;
+      --warm-white: #19140F;
+      --ink: #FAF5EC;
+      --ink-muted: #E0D7CB;
+      --ink-faint: #C9BFB3;
+      --gold: #F3CC82;
+      --gold-dark: #E9B85D;
+      --gold-light: #362A19;
+      --gold-pale: #362A19;
+      --deep: #302218;
+      --border: #67584A;
+      --border-soft: #534538;
+      --control-border: #A08D78;
+      --focus: #F3CC82;
     }
   }
 
@@ -47,6 +59,7 @@
     font-family: var(--sans);
     background: var(--warm-white);
     color: var(--ink);
+    font-size: var(--text-body);
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -65,7 +78,7 @@
 
 /* ─── Eyebrow label ──────────────────────────── */
 .eyebrow {
-  font-size: 0.68rem;
+  font-size: var(--text-meta);
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--gold);
@@ -102,7 +115,7 @@
 
 /* ─── Body text ──────────────────────────────── */
 .body-text {
-  font-size: 1rem;
+  font-size: var(--text-body);
   color: var(--ink-muted);
   line-height: 1.85;
 }
@@ -124,22 +137,22 @@
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
-  font-size: 0.8rem;
+  font-size: var(--text-label);
   font-weight: 500;
   letter-spacing: 0.07em;
   text-transform: uppercase;
-  background: var(--gold);
-  color: var(--deep);
+  background: var(--button);
+  color: var(--on-button);
   padding: 0.85rem 2rem;
   border-radius: 2px;
   text-decoration: none;
   transition: background var(--transition), transform var(--transition);
-  white-space: nowrap;
+  white-space: normal;
   border: none;
   cursor: pointer;
 }
 .btn-gold:hover {
-  background: var(--gold-dark);
+  background: var(--button-hover);
   transform: translateY(-1px);
 }
 
@@ -147,7 +160,7 @@
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
-  font-size: 0.78rem;
+  font-size: var(--text-label);
   font-weight: 500;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -160,18 +173,18 @@
   border: none;
   cursor: pointer;
 }
-.btn-ink:hover { background: var(--gold); }
+.btn-ink:hover { background: var(--button); color: var(--on-button); }
 
 .btn-outline {
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
-  font-size: 0.78rem;
+  font-size: var(--text-label);
   font-weight: 400;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--ink-muted);
-  border: 1px solid var(--border);
+  border: 1px solid var(--control-border);
   padding: 0.75rem 1.5rem;
   border-radius: 2px;
   text-decoration: none;
@@ -185,7 +198,7 @@
 }
 
 .btn-ghost {
-  font-size: 0.76rem;
+  font-size: var(--text-label);
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--ink-muted);
@@ -214,7 +227,7 @@
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
-  font-size: 0.62rem;
+  font-size: var(--text-meta);
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--gold);
@@ -232,7 +245,7 @@
 /* ─── Tag pill ───────────────────────────────── */
 .tag-pill {
   display: inline-block;
-  font-size: 0.65rem;
+  font-size: var(--text-meta);
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--ink-muted);
@@ -263,7 +276,7 @@
   color: var(--ink);
 }
 .scripture-block cite {
-  font-size: 0.72rem;
+  font-size: var(--text-meta);
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--gold);
@@ -298,7 +311,7 @@
   gap: 0.4rem;
 }
 .field label {
-  font-size: 0.68rem;
+  font-size: var(--text-meta);
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--ink-muted);
@@ -308,12 +321,12 @@
 .field textarea,
 .field select {
   padding: 0.75rem 1rem;
-  border: 1px solid var(--border);
+  border: 1px solid var(--control-border);
   border-radius: 2px;
   background: var(--warm-white);
   color: var(--ink);
   font-family: var(--sans);
-  font-size: 0.9rem;
+  font-size: var(--text-label);
   outline: none;
   transition: border-color var(--transition);
   -webkit-appearance: none;
@@ -335,4 +348,44 @@
 
 @media (max-width: 768px) {
   .section-wrap { padding: 4rem 1.5rem; }
+}
+
+/* Map gold text and placeholder colors to the persistent deep surfaces. */
+:where(.palette-inverse, footer) {
+  --gold: var(--gold-on-deep);
+  --focus: var(--gold-on-deep);
+  --control-border: #A08D78;
+}
+:where(.palette-inverse, .on-gold) input::placeholder { color: inherit; opacity: 1; }
+:where(a, button, input, textarea, select):focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+
+@media (max-width: 560px) {
+  .article-text-size > span { flex-basis: 100%; }
+  .form-row-grid { grid-template-columns: minmax(0, 1fr) !important; }
+}
+
+.beliefs-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+.belief-title {
+  font-family: var(--serif);
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--ink);
+  margin-bottom: 0.5rem;
+  overflow-wrap: anywhere;
+}
+.belief-description {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: var(--ink-muted);
+  overflow-wrap: anywhere;
+}
+@media (max-width: 1100px) {
+  .beliefs-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 560px) {
+  .beliefs-grid { grid-template-columns: minmax(0, 1fr); }
 }
