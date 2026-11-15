@@ -175,7 +175,7 @@ export default function VisitPage() {
           </div>
           <div
             style={{
-              background: "var(--ink)",
+              background: "var(--deep)",
               padding: "3rem",
               borderRadius: 4,
               display: "flex",
@@ -250,7 +250,7 @@ export default function VisitPage() {
             style={{
               display: "inline-block",
               padding: "0.9rem 2.5rem",
-              background: "var(--ink)",
+              background: "var(--deep)",
               color: "white",
               fontSize: "0.82rem",
               fontWeight: 500,

@@ -151,7 +151,7 @@ export default function GivePage() {
             </div>
 
             {/* In Person / Envelope */}
-            <div style={{ background: "var(--ink)", padding: "3rem" }}>
+            <div style={{ background: "var(--deep)", padding: "3rem" }}>
               <p style={{ fontSize: "0.68rem", letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--gold)", fontWeight: 500, marginBottom: "1rem" }}>
                 During Service
               </p>

@@ -324,7 +324,7 @@ export default function BlogPostClient({ post }: { post: BlogPost }) {
                 style={{
                   margin: "3rem 0",
                   padding: "2.5rem",
-                  background: "var(--ink)",
+                  background: "var(--deep)",
                   borderRadius: 4,
                   textAlign: "center",
                 }}

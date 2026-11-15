@@ -64,9 +64,9 @@ All in `src/styles/globals.css`:
 |---|---|---|
 | `--cream` | `#F7F4EE` | Section backgrounds |
 | `--warm-white` | `#FDFCFA` | Page background |
-| `--ink` | `#1A1714` | Primary text |
+| `--ink` | `#1A1714` | Adaptive primary text |
 | `--gold` | `#B8933A` | Brand accent |
-| `--deep` | `#2C1A0E` | Hero / dark sections |
+| `--deep` | `#2C1A0E` | Stable dark/inverse surfaces |
 | `--serif` | Cormorant Garamond | Headings & display |
 | `--sans` | DM Sans | Body & UI |
 
