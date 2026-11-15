@@ -284,7 +284,7 @@ export function GoldBannerForm() {
         type="submit"
         style={{
           padding: "0.9rem 1.5rem",
-          background: "var(--ink)",
+          background: "var(--deep)",
           border: "none",
           color: "white",
           fontFamily: "var(--sans)",

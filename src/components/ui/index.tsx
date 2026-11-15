@@ -263,7 +263,7 @@ export function ServiceCard({ service }: { service: ServiceTime }) {
   return (
     <div
       style={{
-        background: service.highlighted ? "var(--ink)" : "var(--warm-white)",
+        background: service.highlighted ? "var(--deep)" : "var(--warm-white)",
         padding: "2.5rem 2rem",
       }}
     >

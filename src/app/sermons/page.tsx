@@ -55,7 +55,7 @@ export default function SermonsPage() {
             {/* Video placeholder */}
             <div
               style={{
-                background: "var(--ink)",
+                background: "var(--deep)",
                 aspectRatio: "16/9",
                 display: "flex",
                 alignItems: "center",

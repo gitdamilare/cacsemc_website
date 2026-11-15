@@ -71,7 +71,7 @@ export default function ContactPage() {
       {/* ── MAIN CONTACT LAYOUT ──────────────────────── */}
       <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1.5px", background: "var(--border)" }} className="contact-main-grid">
         {/* Info */}
-        <div style={{ background: "var(--ink)", padding: "4rem" }} className="contact-info-panel">
+        <div style={{ background: "var(--deep)", padding: "4rem" }} className="contact-info-panel">
           <p style={{ fontSize: "0.68rem", letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--gold)", fontWeight: 500, marginBottom: "0.6rem" }}>
             Find Us
           </p>

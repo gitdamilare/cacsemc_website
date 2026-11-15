@@ -330,7 +330,7 @@ export default function HomePage() {
       <section id="contact">
         <div className="gap-grid contact-grid">
           {/* Info panel */}
-          <div style={{ background: "var(--ink)", padding: "4rem" }} className="contact-info">
+          <div style={{ background: "var(--deep)", padding: "4rem" }} className="contact-info">
             <p className="eyebrow" style={{ marginBottom: "0.6rem", color: "var(--gold)" }}>Find Us</p>
             <h2
               className="section-heading"

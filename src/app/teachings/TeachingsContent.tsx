@@ -323,7 +323,7 @@ export default function TeachingsContent() {
           {/* Subscribe CTA */}
           <div
             style={{
-              background: "var(--ink)",
+              background: "var(--deep)",
               padding: "1.75rem",
               borderRadius: 4,
               textAlign: "center",
