@@ -95,7 +95,11 @@ export default function AboutPage() {
                 We are part of the Christ Apostolic Church, a movement born from
                 the Aladura revival of faith in Nigeria — a tradition of fervent
                 prayer, total dependence on the Holy Spirit, and unwavering
-                commitment to the Word of God.
+                commitment to the Word of God.{" "}
+                <Link href="/about/history/" style={{ color: "var(--gold)" }}>
+                  Read our history
+                </Link>
+                .
               </p>
               <p className="body-text" style={{ marginBottom: "2rem" }}>
                 At Miracle Centre, sound biblical doctrine, passionate worship,
@@ -153,6 +157,25 @@ export default function AboutPage() {
               ))}
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* ── HERITAGE ────────────────────────────────── */}
+      <section className="section-wrap section-cream" style={{ borderTop: "1px solid var(--border)" }}>
+        <div className="section-inner" style={{ maxWidth: 680, textAlign: "center" }}>
+          <p className="eyebrow eyebrow-center" style={{ marginBottom: "0.75rem" }}>Our Heritage</p>
+          <h2 className="section-heading" style={{ marginBottom: "1rem" }}>
+            From 1918 to the{" "}
+            <em style={{ fontStyle: "italic", color: "var(--gold)" }}>Nations</em>
+          </h2>
+          <p className="body-text" style={{ marginBottom: "2rem" }}>
+            Trace the story of Christ Apostolic Church, from the Precious Stone
+            Society in Ijebu-Ode and the 1930 revival at Oke-Ooye, Ilesha, to
+            assemblies around the world.
+          </p>
+          <Link href="/about/history/" className="btn-outline">
+            Explore Our History →
+          </Link>
         </div>
       </section>
 
