@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { ArrowLeft } from "lucide-react";
 import { historyEras, historyEvents } from "@/lib/data";
 import { ScriptureBanner, NewsletterStrip } from "@/components/ui";
 import HistoryTimeline from "./HistoryTimeline";
@@ -22,6 +23,11 @@ export default function HistoryPage() {
           textAlign: "center",
         }}
       >
+        <div style={{ maxWidth: 1200, margin: "0 auto 2.5rem", textAlign: "left" }}>
+          <Link href="/about/" className="btn-outline" style={{ minHeight: 44, fontSize: "var(--text-meta)" }}>
+            <ArrowLeft size={16} aria-hidden="true" /> Back to About Us
+          </Link>
+        </div>
         <div style={{ maxWidth: 680, margin: "0 auto" }}>
           <p className="eyebrow eyebrow-center" style={{ marginBottom: "1rem" }}>
             <Link href="/about/" style={{ color: "inherit" }}>About Us</Link> / Our Heritage
