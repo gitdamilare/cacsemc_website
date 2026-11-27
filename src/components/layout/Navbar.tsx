@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
+import ThemeControl from "@/components/theme/ThemeControl";
 
 const navLinks = [
   { label: "Home",      href: "/" },
@@ -152,6 +153,7 @@ export default function Navbar() {
             <Link href="/visit" className="btn-gold desktop-visit" style={{ padding: "0.5rem 1.2rem" }}>
               Plan a Visit
             </Link>
+            <ThemeControl />
 
             {/* Mobile hamburger */}
             <button
@@ -208,6 +210,9 @@ export default function Navbar() {
                 {link.label}
               </Link>
             ))}
+            <div className="mobile-theme-control">
+              <ThemeControl />
+            </div>
             <div style={{ paddingTop: "1.5rem" }}>
               <Link href="/visit" className="btn-gold" style={{ display: "block", textAlign: "center" }}>
                 Plan a Visit
