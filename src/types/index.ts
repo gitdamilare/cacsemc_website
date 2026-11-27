@@ -60,3 +60,21 @@ export interface Sermon {
   category: string;
   description: string;
 }
+
+export interface HistoryEra {
+  id: string;
+  title: string;
+  span: string;
+  intro: string;
+}
+
+export interface HistoryEvent {
+  id: string; // slug, used as the URL hash
+  year: number;
+  dateLabel: string;
+  era: string; // HistoryEra id
+  title: string;
+  place: string;
+  summary: string;
+  body: string[];
+}
